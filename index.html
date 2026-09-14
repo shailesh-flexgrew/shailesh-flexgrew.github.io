@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shailesh Khandar — Full-stack engineer</title>
+<meta name="description" content="Shailesh Khandar — full-stack engineer in Rajkot, India. Over ten years building and running business software across Next.js, Laravel, NestJS, Go and Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#0C2521;
+  --pine-soft:#15352F;
+  --paper:#E4E7E1;
+  --paper-lift:#EFF1EC;
+  --ink:#12211D;
+  --muted:#67776F;
+  --line:#C7CEC6;
+  --signal:#D9930B;
+  --signal-dim:#8A6716;
+
+  --sans:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+
+  --gutter:clamp(1.25rem,5vw,4rem);
+  --wrap:1140px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:clamp(1rem,0.96rem + 0.2vw,1.075rem);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+img{max-width:100%}
+
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+
+h1,h2,h3,.ui{font-family:var(--sans);font-variation-settings:'wdth' 100}
+.ui{font-size:.78rem;letter-spacing:.01em;color:var(--muted);font-weight:500;margin:0}
+
+a:focus-visible,button:focus-visible{
+  outline:2px solid var(--signal);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  display:flex;flex-wrap:wrap;gap:1rem 1.5rem;
+  align-items:baseline;justify-content:space-between;
+  padding-block:1.5rem 0;
+}
+.sig{
+  font-family:var(--sans);
+  font-variation-settings:'wdth' 112;
+  font-weight:700;font-size:1rem;letter-spacing:-.01em;margin:0;
+}
+.masthead nav{display:flex;gap:1.4rem;font-family:var(--sans);font-size:.85rem}
+.masthead nav a{
+  text-decoration:none;color:var(--muted);
+  padding-bottom:.15rem;border-bottom:1px solid transparent;
+}
+.masthead nav a:hover{color:var(--ink);border-bottom-color:var(--signal)}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(3rem,9vw,6rem) clamp(2rem,5vw,3.5rem)}
+.hero h1{
+  font-variation-settings:'wdth' 118;
+  font-weight:700;
+  font-size:clamp(2.6rem,1.4rem + 5.6vw,5.4rem);
+  line-height:.94;
+  letter-spacing:-.028em;
+  margin:0 0 1.25rem;
+  max-width:14ch;
+}
+.deck{
+  font-size:clamp(1.08rem,1rem + 0.4vw,1.3rem);
+  line-height:1.55;max-width:56ch;margin:0;color:#22322C;
+}
+.tally{
+  display:flex;flex-wrap:wrap;gap:.5rem 2.25rem;
+  margin:2.25rem 0 0;padding:0;list-style:none;
+  font-family:var(--sans);font-size:.85rem;color:var(--muted);
+}
+.tally b{
+  display:block;font-weight:700;font-size:1.6rem;color:var(--ink);
+  font-variation-settings:'wdth' 105;line-height:1.1;
+}
+
+/* ---------- matrix (the loud element) ---------- */
+.matrix{
+  background:var(--pine);color:var(--paper);
+  border-radius:3px;
+  padding:clamp(1.25rem,4vw,2.25rem);
+  margin-block:clamp(2.5rem,6vw,4rem);
+}
+.matrix-intro{
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;
+  align-items:baseline;justify-content:space-between;
+  margin-bottom:1.5rem;
+}
+.matrix-intro h2{
+  font-variation-settings:'wdth' 108;font-weight:600;
+  font-size:1.05rem;margin:0;letter-spacing:-.005em;
+}
+.matrix-intro p{margin:0;font-family:var(--sans);font-size:.78rem;color:#8CA49B}
+
+.scroller{overflow-x:auto;padding-bottom:.5rem}
+table.grid{border-collapse:collapse;width:100%;min-width:560px;font-family:var(--sans)}
+table.grid th,table.grid td{padding:0;text-align:left}
+
+table.grid thead th{
+  vertical-align:bottom;padding-bottom:.85rem;
+  font-weight:500;font-size:.76rem;color:#9FB5AC;
+}
+table.grid thead th span{
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  display:inline-block;white-space:nowrap;
+}
+table.grid thead th:first-child{width:34%;min-width:150px}
+
+.band th{
+  padding:1.1rem 0 .4rem;font-weight:500;font-size:.7rem;
+  color:var(--signal);letter-spacing:.02em;
+}
+.band:first-of-type th{padding-top:0}
+
+tbody tr.tech td,tbody tr.tech th{
+  border-top:1px solid rgba(228,231,225,.13);
+  height:2.35rem;
+}
+tbody tr.tech th{
+  font-weight:400;font-size:.87rem;color:var(--paper);
+  padding-right:1rem;white-space:nowrap;
+}
+.cell{text-align:center}
+.cell i{
+  display:inline-block;width:9px;height:9px;border-radius:1px;
+  background:rgba(228,231,225,.16);vertical-align:middle;
+}
+.cell.on i{
+  background:var(--signal);
+  width:13px;height:13px;
+  box-shadow:0 0 0 3px rgba(217,147,11,.14);
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .cell.on i{
+    opacity:0;transform:scale(.3);
+    animation:pop .38s cubic-bezier(.2,1.4,.4,1) forwards;
+    animation-delay:calc(var(--d) * 34ms + 180ms);
+  }
+}
+@keyframes pop{to{opacity:1;transform:scale(1)}}
+
+.matrix-foot{
+  margin-top:1.75rem;padding-top:1.25rem;
+  border-top:1px solid rgba(228,231,225,.18);
+  display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:baseline;
+}
+.matrix-foot h3{
+  font-variation-settings:'wdth' 108;font-weight:600;font-size:.92rem;
+  margin:0;color:var(--signal);white-space:nowrap;
+}
+.matrix-foot ul{
+  display:flex;flex-wrap:wrap;gap:.4rem .5rem;list-style:none;margin:0;padding:0;
+}
+.matrix-foot li{
+  font-family:var(--sans);font-size:.85rem;
+  padding:.3rem .7rem;border-radius:2px;
+  box-shadow:inset 0 0 0 1px rgba(228,231,225,.28);
+}
+
+/* ---------- work register ---------- */
+.work{padding-block:clamp(1rem,3vw,2rem) clamp(3rem,8vw,5rem)}
+.work > h2{
+  font-variation-settings:'wdth' 112;font-weight:700;
+  font-size:clamp(1.5rem,1.2rem + 1.2vw,2.1rem);
+  letter-spacing:-.02em;margin:0 0 .4rem;
+}
+.work > p.lede{margin:0 0 2.5rem;color:var(--muted);max-width:48ch}
+
+.entry{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:1.5rem clamp(1.5rem,4vw,3.5rem);
+  padding-block:clamp(1.75rem,4vw,2.5rem);
+  border-top:1px solid var(--line);
+}
+.entry:last-of-type{border-bottom:1px solid var(--line)}
+
+.domain{
+  font-family:var(--sans);font-size:.74rem;font-weight:600;
+  color:var(--signal-dim);margin:0 0 .55rem;
+}
+.entry h3{
+  font-variation-settings:'wdth' 108;font-weight:700;
+  font-size:clamp(1.35rem,1.15rem + .8vw,1.85rem);
+  letter-spacing:-.02em;line-height:1.1;margin:0 0 .55rem;
+}
+.visit{
+  font-family:var(--sans);font-size:.86rem;
+  text-decoration:none;color:var(--ink);
+  border-bottom:1.5px solid var(--signal);
+  padding-bottom:1px;
+  display:inline-block;word-break:break-word;
+}
+.visit:hover{background:rgba(217,147,11,.15)}
+.entry p.note{margin:1rem 0 0;max-width:46ch;color:#33433C;font-size:.98rem}
+
+dl.layers{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.05rem 1.25rem;align-content:start}
+dl.layers dt{
+  font-family:var(--sans);font-size:.74rem;color:var(--muted);
+  padding-top:.52rem;white-space:nowrap;
+}
+dl.layers dd{
+  margin:0;padding-top:.4rem;
+  font-family:var(--sans);font-size:.92rem;font-weight:500;
+  border-top:1px solid var(--line);
+  padding-bottom:.5rem;
+}
+dl.layers dt{border-top:1px solid var(--line);padding-top:.4rem;padding-bottom:.5rem}
+
+/* ---------- approach ---------- */
+.approach{padding-block:clamp(2.5rem,6vw,4rem) clamp(3rem,8vw,5rem);border-top:1px solid var(--line)}
+.approach h2{
+  font-variation-settings:'wdth' 112;font-weight:700;
+  font-size:clamp(1.5rem,1.2rem + 1.2vw,2.1rem);
+  letter-spacing:-.02em;margin:0 0 1.5rem;
+}
+.approach .prose{max-width:60ch}
+.approach .prose p{margin:0 0 1.15rem}
+.approach .prose p:last-child{margin-bottom:0}
+
+.practice{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1.5rem clamp(1.5rem,4vw,3rem);
+  margin-top:clamp(2.5rem,6vw,3.5rem);
+}
+.practice section{border-top:2px solid var(--ink);padding-top:.85rem}
+.practice h3{
+  font-variation-settings:'wdth' 106;font-weight:700;font-size:1rem;
+  letter-spacing:-.01em;margin:0 0 .6rem;
+}
+.practice ul{list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:.88rem;color:#33433C}
+.practice li{padding:.3rem 0;border-bottom:1px solid var(--line)}
+.practice li:last-child{border-bottom:0}
+
+@media (max-width:720px){
+  .practice{grid-template-columns:1fr;gap:2rem}
+}
+
+/* ---------- contact ---------- */
+.contact{background:var(--pine-soft);color:var(--paper);padding-block:clamp(3rem,8vw,5rem)}
+.contact h2{
+  font-variation-settings:'wdth' 118;font-weight:700;
+  font-size:clamp(1.9rem,1.3rem + 2.6vw,3.2rem);
+  letter-spacing:-.025em;line-height:1;margin:0 0 1rem;max-width:16ch;
+}
+.contact p{color:#B8C9C2;max-width:46ch;margin:0 0 2rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem 1rem;list-style:none;padding:0;margin:0}
+.links a{
+  font-family:var(--sans);font-size:.9rem;font-weight:500;
+  text-decoration:none;color:var(--pine);background:var(--paper);
+  padding:.6rem 1.15rem;border-radius:2px;display:inline-block;
+}
+.links a:hover{background:var(--signal);color:var(--pine)}
+.links a.ghost{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 1px rgba(228,231,225,.35)}
+.links a.ghost:hover{background:rgba(228,231,225,.12);color:var(--paper)}
+
+footer{padding-block:1.5rem 2rem;font-family:var(--sans);font-size:.78rem;color:var(--muted)}
+
+@media (max-width:720px){
+  .entry{grid-template-columns:1fr;gap:1.5rem}
+  .tally{gap:1.25rem 1.75rem}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap masthead">
+  <p class="sig">Shailesh Khandar</p>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#approach">Approach</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <h1>Six systems in production.</h1>
+    <p class="deck">For over ten years I've built and run business software end to end — commerce, CRM, HR, training, automation and community platforms — choosing the runtime that fits the problem rather than the one I already know, then containerising it and taking it to production myself.</p>
+    <ul class="tally">
+      <li><b>10+</b>years shipping software</li>
+      <li><b>6</b>live products</li>
+      <li><b>4</b>server languages</li>
+      <li><b>12</b>technologies in use</li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <div class="matrix">
+      <div class="matrix-intro">
+        <h2>What runs where</h2>
+        <p>Every technology, mapped against the product it ships in.</p>
+      </div>
+      <div class="scroller">
+        <table class="grid">
+          <caption class="ui" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Technology usage across six projects</caption>
+          <thead>
+            <tr>
+              <th scope="col">Technology</th>
+              <th scope="col"><span>Commerce</span></th>
+              <th scope="col"><span>TrainIQ</span></th>
+              <th scope="col"><span>HRMS</span></th>
+              <th scope="col"><span>CRM</span></th>
+              <th scope="col"><span>Automate</span></th>
+              <th scope="col"><span>Heartlynks</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="band"><th colspan="7" scope="colgroup">Interface</th></tr>
+            <tr class="tech"><th scope="row">Next.js</th>
+              <td class="cell on" style="--d:0"><i></i></td><td class="cell on" style="--d:1"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:2"><i></i></td><td class="cell on" style="--d:3"><i></i></td></tr>
+            <tr class="tech"><th scope="row">Vue.js</th>
+              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:4"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
+            <tr class="tech"><th scope="row">Inertia.js</th>
+              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:5"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
+
+            <tr class="band"><th colspan="7" scope="colgroup">Server</th></tr>
+            <tr class="tech"><th scope="row">Laravel</th>
+              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:6"><i></i></td><td class="cell on" style="--d:7"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
+            <tr class="tech"><th scope="row">NestJS</th>
+              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:8"><i></i></td><td class="cell"><i></i></td></tr>
+            <tr class="tech"><th scope="row">Python</th>
+              <td class="cell"><i></i></td><td class="cell on" style="--d:9"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
+            <tr class="tech"><th scope="row">Go — Fiber</th>
+              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:10"><i></i></td></tr>
+
+            <tr class="band"><th colspan="7" scope="colgroup">Data</th></tr>
+            <tr class="tech"><th scope="row">MySQL</th>
+              <td class="cell on" style="--d:11"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:12"><i></i></td><td class="cell on" style="--d:13"><i></i></td><td class="cell on" style="--d:14"><i></i></td><td class="cell"><i></i></td></tr>
+            <tr class="tech"><th scope="row">PostgreSQL</th>
+              <td class="cell"><i></i></td><td class="cell on" style="--d:15"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:16"><i></i></td></tr>
+
+            <tr class="band"><th colspan="7" scope="colgroup">Cache and streaming</th></tr>
+            <tr class="tech"><th scope="row">Redis</th>
+              <td class="cell on" style="--d:17"><i></i></td><td class="cell on" style="--d:18"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:19"><i></i></td><td class="cell on" style="--d:20"><i></i></td></tr>
+            <tr class="tech"><th scope="row">Apache Kafka</th>
+              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:21"><i></i></td></tr>
+
+            <tr class="band"><th colspan="7" scope="colgroup">Desktop</th></tr>
+            <tr class="tech"><th scope="row">Screenshot monitor agent</th>
+              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:22"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="matrix-foot">
+        <h3>Shipped on</h3>
+        <ul>
+          <li>AWS</li>
+          <li>Google Cloud</li>
+          <li>Docker</li>
+          <li>Managed cloud hosting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap work" id="work">
+    <h2>Work</h2>
+    <p class="lede">Each product listed by the layer it runs on, from browser down to storage.</p>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Commerce</p>
+        <h3>Lifeguard Commerce</h3>
+        <a class="visit" href="https://ecom.lifeguardcrm.com/" target="_blank" rel="noopener">ecom.lifeguardcrm.com</a>
+        <p class="note">Customer-facing storefront for the Lifeguard product range, with catalog browsing, cart and checkout served from a single Next.js application.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Next.js</dd>
+        <dt>Server</dt><dd>Next.js</dd>
+        <dt>Data</dt><dd>MySQL</dd>
+        <dt>Cache</dt><dd>Redis</dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Training</p>
+        <h3>TrainIQ</h3>
+        <a class="visit" href="https://trainiq.ae/" target="_blank" rel="noopener">trainiq.ae</a>
+        <p class="note">Training and assessment platform, with a Python service handling the heavier processing behind a Next.js front end.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Next.js</dd>
+        <dt>Server</dt><dd>Python</dd>
+        <dt>Data</dt><dd>PostgreSQL</dd>
+        <dt>Cache</dt><dd>Redis</dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">People operations</p>
+        <h3>Lifeguard HRMS</h3>
+        <a class="visit" href="https://app.lifeguardhrms.cloud/" target="_blank" rel="noopener">app.lifeguardhrms.cloud</a>
+        <p class="note">HR management system covering employee records, attendance and productivity, paired with a desktop agent that captures periodic screenshots and reports activity back to the server.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Vue.js</dd>
+        <dt>Server</dt><dd>Laravel</dd>
+        <dt>Data</dt><dd>MySQL</dd>
+        <dt>Desktop</dt><dd>Screenshot monitor agent</dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Sales</p>
+        <h3>Lifeguard CRM</h3>
+        <a class="visit" href="https://app.lifeguardcrm.com/" target="_blank" rel="noopener">app.lifeguardcrm.com</a>
+        <p class="note">Lead and customer management built as a monolith, using Inertia to drive a single-page interface without splitting the codebase into a separate API.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Inertia.js</dd>
+        <dt>Server</dt><dd>Laravel</dd>
+        <dt>Data</dt><dd>MySQL</dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Automation</p>
+        <h3>The Automate</h3>
+        <a class="visit" href="https://user.theautomate.ai/login" target="_blank" rel="noopener">user.theautomate.ai</a>
+        <p class="note">Workflow automation product where users configure and run recurring jobs, with a NestJS API separated from the Next.js client.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Next.js</dd>
+        <dt>Server</dt><dd>NestJS</dd>
+        <dt>Data</dt><dd>MySQL</dd>
+        <dt>Cache</dt><dd>Redis</dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Community</p>
+        <h3>Heartlynks Community</h3>
+        <a class="visit" href="https://community.heartlynks.org/" target="_blank" rel="noopener">community.heartlynks.org</a>
+        <p class="note">Community platform built for throughput — a Go service on Fiber handles requests, and Kafka carries events between producers and consumers so activity feeds and notifications stay decoupled.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Next.js</dd>
+        <dt>Server</dt><dd>Go — Fiber</dd>
+        <dt>Data</dt><dd>PostgreSQL</dd>
+        <dt>Streaming</dt><dd>Apache Kafka</dd>
+        <dt>Cache</dt><dd>Redis</dd>
+      </dl>
+    </article>
+  </section>
+
+  <section class="wrap approach" id="approach">
+    <h2>How I work</h2>
+    <div class="prose">
+      <p>Over ten years I've moved between interface, server and infrastructure rather than settling into one of them. That was deliberate. Most of the problems worth solving in business software sit at the seams — between the client and the API, between the API and the database, between the code and the machine it runs on — and those seams are invisible if you only ever work on one side.</p>
+      <p>It also means I pick the stack for the job rather than the job for the stack. A CRM that one small team maintains is better as a Laravel monolith with Inertia than as a split API and client, because there is no second team to justify the split. A community feed with unpredictable load is better in Go with Kafka carrying events between services. I've shipped both, and the reasoning was the same each time: choose what the people who inherit it can actually operate.</p>
+      <p>I deploy and run what I build. Containers, AWS and Google Cloud, managed hosting where the simpler thing is the right thing. Handing over a repository and calling it finished has never been the job.</p>
+    </div>
+
+    <div class="practice">
+      <section>
+        <h3>Product engineering</h3>
+        <ul>
+          <li>Next.js and React interfaces</li>
+          <li>Vue.js and Inertia</li>
+          <li>Multi-tenant SaaS applications</li>
+          <li>Authentication and role-based access</li>
+          <li>Third-party API integration</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Systems and data</h3>
+        <ul>
+          <li>Laravel, NestJS, Go (Fiber), Python</li>
+          <li>REST API design and versioning</li>
+          <li>MySQL and PostgreSQL schema design</li>
+          <li>Query tuning and Redis caching</li>
+          <li>Event streaming with Apache Kafka</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Deployment</h3>
+        <ul>
+          <li>Docker images and Compose</li>
+          <li>AWS and Google Cloud</li>
+          <li>Managed cloud hosting</li>
+          <li>Environment and secrets management</li>
+          <li>Release and rollback process</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Available for new work.</h2>
+      <p>Contract, full-time or advisory. Send me the problem rather than the job spec, and I'll tell you honestly whether ten years of this makes me the right person for it.</p>
+      <ul class="links">
+        <li><a href="mailto:khandarshailesh111@gmail.com">khandarshailesh111@gmail.com</a></li>
+        <li><a class="ghost" href="tel:+918160694389">+91 81606 94389</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Shailesh Khandar — Full-stack engineer, Rajkot, Gujarat, India</p>
+</footer>
+
+</body>
+</html>
