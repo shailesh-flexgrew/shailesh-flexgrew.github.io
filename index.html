@@ -213,7 +213,8 @@ tbody tr.tech th{
   padding-bottom:1px;
   display:inline-block;word-break:break-word;
 }
-.visit:hover{background:rgba(217,147,11,.15)}
+a.visit:hover{background:rgba(217,147,11,.15)}
+.visit.muted-link{color:var(--muted);border-bottom:1.5px dotted var(--line);cursor:default}
 .entry p.note{margin:1rem 0 0;max-width:46ch;color:#33433C;font-size:.98rem}
 
 dl.layers{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.05rem 1.25rem;align-content:start}
@@ -241,7 +242,7 @@ dl.layers dt{border-top:1px solid var(--line);padding-top:.4rem;padding-bottom:.
 .approach .prose p:last-child{margin-bottom:0}
 
 .practice{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
   gap:1.5rem clamp(1.5rem,4vw,3rem);
   margin-top:clamp(2.5rem,6vw,3.5rem);
 }
@@ -254,6 +255,9 @@ dl.layers dt{border-top:1px solid var(--line);padding-top:.4rem;padding-bottom:.
 .practice li{padding:.3rem 0;border-bottom:1px solid var(--line)}
 .practice li:last-child{border-bottom:0}
 
+@media (max-width:1020px){
+  .practice{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 @media (max-width:720px){
   .practice{grid-template-columns:1fr;gap:2rem}
 }
@@ -297,11 +301,11 @@ footer{padding-block:1.5rem 2rem;font-family:var(--sans);font-size:.78rem;color:
 
 <main>
   <section class="wrap hero">
-    <h1>Six systems in production.</h1>
-    <p class="deck">For over ten years I've built and run business software end to end — commerce, CRM, HR, training, automation and community platforms — choosing the runtime that fits the problem rather than the one I already know, then containerising it and taking it to production myself.</p>
+    <h1>Nine systems in production.</h1>
+    <p class="deck">For over ten years I've built and run business software end to end — commerce, CRM, HR, training, automation, ERP, real estate and community platforms — choosing the runtime that fits the problem rather than the one I already know, then containerising it and taking it to production myself.</p>
     <ul class="tally">
       <li><b>10+</b>years shipping software</li>
-      <li><b>6</b>live products</li>
+      <li><b>9</b>live products</li>
       <li><b>4</b>server languages</li>
       <li><b>12</b>technologies in use</li>
     </ul>
@@ -311,7 +315,7 @@ footer{padding-block:1.5rem 2rem;font-family:var(--sans);font-size:.78rem;color:
     <div class="matrix">
       <div class="matrix-intro">
         <h2>What runs where</h2>
-        <p>Every technology, mapped against the product it ships in.</p>
+        <p>Every technology, mapped against the six core platforms it ships in.</p>
       </div>
       <div class="scroller">
         <table class="grid">
@@ -469,6 +473,45 @@ footer{padding-block:1.5rem 2rem;font-family:var(--sans);font-size:.78rem;color:
         <dt>Cache</dt><dd>Redis</dd>
       </dl>
     </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Commerce</p>
+        <h3>Carolina Cabinet Warehouse</h3>
+        <a class="visit" href="https://carolinacabinetwarehouse.com/" target="_blank" rel="noopener">carolinacabinetwarehouse.com</a>
+        <p class="note">Retail cabinet storefront built on a custom PHP stack rather than a hosted cart, so catalogue structure, bulk pricing and checkout follow how the business actually sells instead of how a template expects it to.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Bootstrap, jQuery</dd>
+        <dt>Server</dt><dd>PHP &mdash; Laravel</dd>
+        <dt>Analytics</dt><dd>GTM, GA, Meta Pixel</dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Manufacturing ERP</p>
+        <h3>FlexMat ERP</h3>
+        <span class="visit muted-link">flexmat.flexgrew.cloud &mdash; private</span>
+        <p class="note">Complete ERP for mechanical and fabrication businesses &mdash; materials, production and the paperwork around them in a single system. Runs behind a login for customer tenants, so there is no public demo.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Vue.js &mdash; Vite</dd>
+        <dt>Server</dt><dd>PHP &mdash; Laravel</dd>
+      </dl>
+    </article>
+
+    <article class="entry">
+      <div>
+        <p class="domain">Real estate</p>
+        <h3>Flexgrew Estate</h3>
+        <a class="visit" href="https://flexestate.flexgrew.com/" target="_blank" rel="noopener">flexestate.flexgrew.com</a>
+        <p class="note">Investment analysis platform for property investors &mdash; cash flow, cap rate, cash-on-cash, DSCR and flip projections run against a deal in seconds, with a pipeline that tracks it from first look through to close.</p>
+      </div>
+      <dl class="layers">
+        <dt>Interface</dt><dd>Next.js</dd>
+      </dl>
+    </article>
   </section>
 
   <section class="wrap approach" id="approach">
@@ -508,6 +551,17 @@ footer{padding-block:1.5rem 2rem;font-family:var(--sans);font-size:.78rem;color:
           <li>Managed cloud hosting</li>
           <li>Environment and secrets management</li>
           <li>Release and rollback process</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AI and automation</h3>
+        <ul>
+          <li>AI agents and chatbots</li>
+          <li>Workflow automation with n8n</li>
+          <li>Custom automation services</li>
+          <li>LLM integration into existing products</li>
+          <li>Custom CRM and ERP builds</li>
         </ul>
       </section>
     </div>
