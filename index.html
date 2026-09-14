@@ -3,594 +3,1137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shailesh Khandar — Full-stack engineer</title>
-<meta name="description" content="Shailesh Khandar — full-stack engineer in Rajkot, India. Over ten years building and running business software across Next.js, Laravel, NestJS, Go and Python.">
+<title>Shailesh Khandar — Senior Full-Stack &amp; Product Engineer</title>
+<meta name="description" content="Shailesh Khandar, senior full-stack and product engineer with 10+ years building and operating production SaaS, ERP, CRM, commerce, automation and AI-powered business software.">
+<link rel="canonical" href="https://shailesh-flexgrew.github.io/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0A0A0C">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shailesh-flexgrew.github.io/">
+<meta property="og:site_name" content="Shailesh Khandar">
+<meta property="og:title" content="Shailesh Khandar — Senior Full-Stack &amp; Product Engineer">
+<meta property="og:description" content="10+ years building and operating production SaaS, ERP, CRM, commerce, automation and AI-powered business software.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shailesh Khandar — Senior Full-Stack &amp; Product Engineer">
+<meta name="twitter:description" content="10+ years building and operating production SaaS, ERP, CRM, commerce, automation and AI-powered business software.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Person",
+      "@id":"https://shailesh-flexgrew.github.io/#person",
+      "name":"Shailesh Khandar",
+      "jobTitle":"Senior Full-Stack & Product Engineer",
+      "url":"https://shailesh-flexgrew.github.io/",
+      "email":"mailto:khandarshailesh111@gmail.com",
+      "telephone":"+91-81606-94389",
+      "address":{"@type":"PostalAddress","addressLocality":"Rajkot","addressRegion":"Gujarat","addressCountry":"IN"},
+      "knowsAbout":["Full-stack engineering","SaaS platforms","ERP systems","CRM systems","Multi-tenant architecture","API architecture","Database architecture","Cloud infrastructure","AI agents and automation"]
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://shailesh-flexgrew.github.io/#website",
+      "url":"https://shailesh-flexgrew.github.io/",
+      "name":"Shailesh Khandar — Senior Full-Stack & Product Engineer",
+      "publisher":{"@id":"https://shailesh-flexgrew.github.io/#person"},
+      "inLanguage":"en"
+    }
+  ]
+}
+</script>
+
 <style>
 :root{
-  --pine:#0C2521;
-  --pine-soft:#15352F;
-  --paper:#E4E7E1;
-  --paper-lift:#EFF1EC;
-  --ink:#12211D;
-  --muted:#67776F;
-  --line:#C7CEC6;
-  --signal:#D9930B;
-  --signal-dim:#8A6716;
+  --bg:#0A0A0C;
+  --surface:#101013;
+  --surface-2:#16161B;
+  --line:rgba(255,255,255,.075);
+  --line-2:rgba(255,255,255,.15);
+  --text:#EDEDF0;
+  --muted:#8B8B99;
+  --dim:#63636F;
+  --accent:#7B61FF;
+  --accent-soft:rgba(123,97,255,.14);
+  --accent-line:rgba(123,97,255,.38);
 
-  --sans:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --font:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
 
-  --gutter:clamp(1.25rem,5vw,4rem);
-  --wrap:1140px;
+  --gutter:clamp(1.15rem,4vw,3.5rem);
+  --wrap:1180px;
+  --nav-h:68px;
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
 body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--serif);
-  font-size:clamp(1rem,0.96rem + 0.2vw,1.075rem);
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--font);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
+img,svg{display:block;max-width:100%}
 a{color:inherit}
-img{max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none;margin:0;padding:0}
 
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter);width:100%}
 
-h1,h2,h3,.ui{font-family:var(--sans);font-variation-settings:'wdth' 100}
-.ui{font-size:.78rem;letter-spacing:.01em;color:var(--muted);font-weight:500;margin:0}
+:where(a,button,summary,[tabindex]):focus-visible{
+  outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;
+}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:200;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:8px;transition:top .2s}
+.skip:focus{top:1rem}
 
-a:focus-visible,button:focus-visible{
-  outline:2px solid var(--signal);
-  outline-offset:3px;
-  border-radius:2px;
-}
+/* ===== type scale ===== */
+h1,h2,h3,h4{margin:0;font-weight:800;letter-spacing:-.032em;line-height:1.05}
+h1{font-size:clamp(2.4rem,1.1rem + 5.2vw,4.4rem)}
+h2{font-size:clamp(1.85rem,1.3rem + 2.3vw,3rem)}
+h3{font-size:clamp(1.15rem,1.05rem + .5vw,1.45rem);letter-spacing:-.022em}
+p{margin:0}
 
-/* ---------- masthead ---------- */
-.masthead{
-  display:flex;flex-wrap:wrap;gap:1rem 1.5rem;
-  align-items:baseline;justify-content:space-between;
-  padding-block:1.5rem 0;
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
 }
-.sig{
-  font-family:var(--sans);
-  font-variation-settings:'wdth' 112;
-  font-weight:700;font-size:1rem;letter-spacing:-.01em;margin:0;
-}
-.masthead nav{display:flex;gap:1.4rem;font-family:var(--sans);font-size:.85rem}
-.masthead nav a{
-  text-decoration:none;color:var(--muted);
-  padding-bottom:.15rem;border-bottom:1px solid transparent;
-}
-.masthead nav a:hover{color:var(--ink);border-bottom-color:var(--signal)}
+.lede{color:var(--muted);font-size:clamp(1rem,.96rem + .3vw,1.13rem);line-height:1.6;max-width:58ch}
 
-/* ---------- hero ---------- */
-.hero{padding-block:clamp(3rem,9vw,6rem) clamp(2rem,5vw,3.5rem)}
-.hero h1{
-  font-variation-settings:'wdth' 118;
-  font-weight:700;
-  font-size:clamp(2.6rem,1.4rem + 5.6vw,5.4rem);
-  line-height:.94;
-  letter-spacing:-.028em;
-  margin:0 0 1.25rem;
-  max-width:14ch;
-}
-.deck{
-  font-size:clamp(1.08rem,1rem + 0.4vw,1.3rem);
-  line-height:1.55;max-width:56ch;margin:0;color:#22322C;
-}
-.tally{
-  display:flex;flex-wrap:wrap;gap:.5rem 2.25rem;
-  margin:2.25rem 0 0;padding:0;list-style:none;
-  font-family:var(--sans);font-size:.85rem;color:var(--muted);
-}
-.tally b{
-  display:block;font-weight:700;font-size:1.6rem;color:var(--ink);
-  font-variation-settings:'wdth' 105;line-height:1.1;
-}
+/* ===== section frame ===== */
+.section{padding-block:clamp(4rem,9vw,7.5rem);position:relative}
+.section + .section{border-top:1px solid var(--line)}
+.s-head{max-width:62ch;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.s-head .eyebrow{display:block;margin-bottom:1rem}
+.s-head h2{margin-bottom:1rem}
 
-/* ---------- matrix (the loud element) ---------- */
-.matrix{
-  background:var(--pine);color:var(--paper);
-  border-radius:3px;
-  padding:clamp(1.25rem,4vw,2.25rem);
-  margin-block:clamp(2.5rem,6vw,4rem);
+/* ===== nav ===== */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:100;height:var(--nav-h);
+  display:flex;align-items:center;
+  border-bottom:1px solid transparent;transition:background .3s,border-color .3s,height .3s;
 }
-.matrix-intro{
-  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;
-  align-items:baseline;justify-content:space-between;
-  margin-bottom:1.5rem;
+.nav.stuck{
+  height:58px;background:rgba(10,10,12,.78);
+  backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);
+  border-bottom-color:var(--line);
 }
-.matrix-intro h2{
-  font-variation-settings:'wdth' 108;font-weight:600;
-  font-size:1.05rem;margin:0;letter-spacing:-.005em;
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:-.03em;font-size:1rem;text-decoration:none}
+.logo .mark{
+  width:26px;height:26px;border-radius:7px;flex:none;
+  background:linear-gradient(140deg,var(--accent),#3E2FA8);
+  display:grid;place-items:center;font-size:.7rem;color:#fff;font-weight:800;letter-spacing:0;
 }
-.matrix-intro p{margin:0;font-family:var(--sans);font-size:.78rem;color:#8CA49B}
+.nav-links{display:flex;align-items:center;gap:.35rem}
+.nav-links a{
+  text-decoration:none;color:var(--muted);font-size:.88rem;font-weight:500;
+  padding:.45rem .75rem;border-radius:8px;transition:color .2s,background .2s;
+}
+.nav-links a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.nav-links a[aria-current="true"]{color:var(--text)}
+.nav-cta{
+  text-decoration:none;font-size:.86rem;font-weight:700;
+  padding:.52rem 1.05rem;border-radius:999px;
+  background:var(--text);color:#0A0A0C;transition:transform .2s,box-shadow .2s;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px -8px rgba(255,255,255,.35)}
+.burger{display:none;width:40px;height:40px;border-radius:9px;border:1px solid var(--line);place-items:center}
+.burger span{display:block;width:16px;height:1.5px;background:var(--text);position:relative}
+.burger span::before,.burger span::after{content:'';position:absolute;left:0;width:16px;height:1.5px;background:var(--text);transition:transform .25s,top .25s}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{top:0;transform:rotate(45deg)}
+.nav.open .burger span::after{top:0;transform:rotate(-45deg)}
 
-.scroller{overflow-x:auto;padding-bottom:.5rem}
-table.grid{border-collapse:collapse;width:100%;min-width:560px;font-family:var(--sans)}
-table.grid th,table.grid td{padding:0;text-align:left}
-
-table.grid thead th{
-  vertical-align:bottom;padding-bottom:.85rem;
-  font-weight:500;font-size:.76rem;color:#9FB5AC;
-}
-table.grid thead th span{
-  writing-mode:vertical-rl;transform:rotate(180deg);
-  display:inline-block;white-space:nowrap;
-}
-table.grid thead th:first-child{width:34%;min-width:150px}
-
-.band th{
-  padding:1.1rem 0 .4rem;font-weight:500;font-size:.7rem;
-  color:var(--signal);letter-spacing:.02em;
-}
-.band:first-of-type th{padding-top:0}
-
-tbody tr.tech td,tbody tr.tech th{
-  border-top:1px solid rgba(228,231,225,.13);
-  height:2.35rem;
-}
-tbody tr.tech th{
-  font-weight:400;font-size:.87rem;color:var(--paper);
-  padding-right:1rem;white-space:nowrap;
-}
-.cell{text-align:center}
-.cell i{
-  display:inline-block;width:9px;height:9px;border-radius:1px;
-  background:rgba(228,231,225,.16);vertical-align:middle;
-}
-.cell.on i{
-  background:var(--signal);
-  width:13px;height:13px;
-  box-shadow:0 0 0 3px rgba(217,147,11,.14);
-}
-
-@media (prefers-reduced-motion:no-preference){
-  .cell.on i{
-    opacity:0;transform:scale(.3);
-    animation:pop .38s cubic-bezier(.2,1.4,.4,1) forwards;
-    animation-delay:calc(var(--d) * 34ms + 180ms);
+@media (max-width:900px){
+  .nav-links,.nav > .wrap > .nav-cta{display:none}
+  .burger{display:grid}
+  .nav.open{background:rgba(10,10,12,.96);backdrop-filter:blur(16px)}
+  .mobile-menu{
+    position:fixed;top:var(--nav-h);left:0;right:0;z-index:99;
+    background:rgba(10,10,12,.97);backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+    padding:1rem var(--gutter) 1.75rem;
+    display:none;flex-direction:column;gap:.2rem;
+  }
+  .mobile-menu.show{display:flex}
+  .mobile-menu a{
+    text-decoration:none;font-size:1.05rem;font-weight:600;color:var(--text);
+    padding:.85rem 0;border-bottom:1px solid var(--line);
+  }
+  .mobile-menu a:last-child{
+    border-bottom:0;margin-top:1rem;background:var(--accent);color:#fff;
+    text-align:center;border-radius:999px;padding:.85rem 1rem;
   }
 }
-@keyframes pop{to{opacity:1;transform:scale(1)}}
+@media (min-width:901px){.mobile-menu{display:none !important}}
 
-.matrix-foot{
-  margin-top:1.75rem;padding-top:1.25rem;
-  border-top:1px solid rgba(228,231,225,.18);
-  display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:baseline;
+/* ===== hero ===== */
+.hero{position:relative;padding-top:calc(var(--nav-h) + clamp(3rem,8vw,6rem));padding-bottom:clamp(3rem,7vw,5rem);overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-bg::before{
+  content:'';position:absolute;top:-45%;left:50%;transform:translateX(-50%);
+  width:min(1100px,140vw);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(123,97,255,.20),rgba(123,97,255,.06) 45%,transparent 68%);
 }
-.matrix-foot h3{
-  font-variation-settings:'wdth' 108;font-weight:600;font-size:.92rem;
-  margin:0;color:var(--signal);white-space:nowrap;
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 55% at 50% 25%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 55% at 50% 25%,#000 30%,transparent 75%);
+  opacity:.65;
 }
-.matrix-foot ul{
-  display:flex;flex-wrap:wrap;gap:.4rem .5rem;list-style:none;margin:0;padding:0;
+.hero .wrap{position:relative}
+.hero .eyebrow{display:block;margin-bottom:1.5rem}
+.hero h1{max-width:17ch;margin-bottom:1.6rem}
+.hero h1 em{font-style:normal;color:var(--muted)}
+.hero .lede{max-width:56ch;margin-bottom:2.4rem}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
+  font-weight:700;font-size:.92rem;padding:.85rem 1.5rem;border-radius:999px;
+  transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;
 }
-.matrix-foot li{
-  font-family:var(--sans);font-size:.85rem;
-  padding:.3rem .7rem;border-radius:2px;
-  box-shadow:inset 0 0 0 1px rgba(228,231,225,.28);
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 34px -14px rgba(123,97,255,.9)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px -14px rgba(123,97,255,1)}
+.btn-ghost{border:1px solid var(--line-2);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.28);transform:translateY(-2px)}
+.link-sub{
+  display:inline-block;margin-top:1.6rem;text-decoration:none;font-size:.9rem;
+  color:var(--muted);border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:2px;
 }
+.link-sub:hover{color:var(--text);border-bottom-color:var(--accent)}
 
-/* ---------- work register ---------- */
-.work{padding-block:clamp(1rem,3vw,2rem) clamp(3rem,8vw,5rem)}
-.work > h2{
-  font-variation-settings:'wdth' 112;font-weight:700;
-  font-size:clamp(1.5rem,1.2rem + 1.2vw,2.1rem);
-  letter-spacing:-.02em;margin:0 0 .4rem;
+/* hero pipeline */
+.pipeline{
+  margin-top:clamp(3rem,7vw,5rem);position:relative;
+  border:1px solid var(--line);border-radius:16px;
+  background:linear-gradient(180deg,rgba(255,255,255,.032),rgba(255,255,255,0));
+  padding:clamp(1.25rem,3vw,2rem);overflow:hidden;
 }
-.work > p.lede{margin:0 0 2.5rem;color:var(--muted);max-width:48ch}
-
-.entry{
-  display:grid;
-  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
-  gap:1.5rem clamp(1.5rem,4vw,3.5rem);
-  padding-block:clamp(1.75rem,4vw,2.5rem);
-  border-top:1px solid var(--line);
+.pipeline-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:1.25rem}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;align-items:stretch}
+.node{
+  position:relative;border:1px solid var(--line);border-radius:11px;
+  background:var(--surface);padding:.85rem .8rem;text-align:center;
+  transition:border-color .3s,background .3s;
 }
-.entry:last-of-type{border-bottom:1px solid var(--line)}
-
-.domain{
-  font-family:var(--sans);font-size:.74rem;font-weight:600;
-  color:var(--signal-dim);margin:0 0 .55rem;
+.node b{display:block;font-size:.82rem;font-weight:700;letter-spacing:-.015em;margin-bottom:.2rem}
+.node span{font-family:var(--mono);font-size:.63rem;color:var(--dim);letter-spacing:.03em}
+.node.hot{border-color:var(--accent-line);background:var(--accent-soft)}
+.pipe-track{position:relative;height:1px;background:var(--line);margin:.9rem 2px 0}
+.pipe-dot{position:absolute;top:-2px;left:0;width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px 2px rgba(123,97,255,.8)}
+@media (prefers-reduced-motion:no-preference){
+  .pipe-dot{animation:travel 5.2s linear infinite}
 }
-.entry h3{
-  font-variation-settings:'wdth' 108;font-weight:700;
-  font-size:clamp(1.35rem,1.15rem + .8vw,1.85rem);
-  letter-spacing:-.02em;line-height:1.1;margin:0 0 .55rem;
-}
-.visit{
-  font-family:var(--sans);font-size:.86rem;
-  text-decoration:none;color:var(--ink);
-  border-bottom:1.5px solid var(--signal);
-  padding-bottom:1px;
-  display:inline-block;word-break:break-word;
-}
-a.visit:hover{background:rgba(217,147,11,.15)}
-.visit.muted-link{color:var(--muted);border-bottom:1.5px dotted var(--line);cursor:default}
-.entry p.note{margin:1rem 0 0;max-width:46ch;color:#33433C;font-size:.98rem}
-
-dl.layers{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.05rem 1.25rem;align-content:start}
-dl.layers dt{
-  font-family:var(--sans);font-size:.74rem;color:var(--muted);
-  padding-top:.52rem;white-space:nowrap;
-}
-dl.layers dd{
-  margin:0;padding-top:.4rem;
-  font-family:var(--sans);font-size:.92rem;font-weight:500;
-  border-top:1px solid var(--line);
-  padding-bottom:.5rem;
-}
-dl.layers dt{border-top:1px solid var(--line);padding-top:.4rem;padding-bottom:.5rem}
-
-/* ---------- approach ---------- */
-.approach{padding-block:clamp(2.5rem,6vw,4rem) clamp(3rem,8vw,5rem);border-top:1px solid var(--line)}
-.approach h2{
-  font-variation-settings:'wdth' 112;font-weight:700;
-  font-size:clamp(1.5rem,1.2rem + 1.2vw,2.1rem);
-  letter-spacing:-.02em;margin:0 0 1.5rem;
-}
-.approach .prose{max-width:60ch}
-.approach .prose p{margin:0 0 1.15rem}
-.approach .prose p:last-child{margin-bottom:0}
-
-.practice{
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:1.5rem clamp(1.5rem,4vw,3rem);
-  margin-top:clamp(2.5rem,6vw,3.5rem);
-}
-.practice section{border-top:2px solid var(--ink);padding-top:.85rem}
-.practice h3{
-  font-variation-settings:'wdth' 106;font-weight:700;font-size:1rem;
-  letter-spacing:-.01em;margin:0 0 .6rem;
-}
-.practice ul{list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:.88rem;color:#33433C}
-.practice li{padding:.3rem 0;border-bottom:1px solid var(--line)}
-.practice li:last-child{border-bottom:0}
-
-@media (max-width:1020px){
-  .practice{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media (max-width:720px){
-  .practice{grid-template-columns:1fr;gap:2rem}
+@keyframes travel{0%{left:0;opacity:0}6%{opacity:1}94%{opacity:1}100%{left:100%;opacity:0}}
+@media (max-width:760px){
+  .pipe{grid-template-columns:repeat(2,1fr)}
+  .pipe-track{display:none}
 }
 
-/* ---------- contact ---------- */
-.contact{background:var(--pine-soft);color:var(--paper);padding-block:clamp(3rem,8vw,5rem)}
-.contact h2{
-  font-variation-settings:'wdth' 118;font-weight:700;
-  font-size:clamp(1.9rem,1.3rem + 2.6vw,3.2rem);
-  letter-spacing:-.025em;line-height:1;margin:0 0 1rem;max-width:16ch;
-}
-.contact p{color:#B8C9C2;max-width:46ch;margin:0 0 2rem}
-.links{display:flex;flex-wrap:wrap;gap:.75rem 1rem;list-style:none;padding:0;margin:0}
-.links a{
-  font-family:var(--sans);font-size:.9rem;font-weight:500;
-  text-decoration:none;color:var(--pine);background:var(--paper);
-  padding:.6rem 1.15rem;border-radius:2px;display:inline-block;
-}
-.links a:hover{background:var(--signal);color:var(--pine)}
-.links a.ghost{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 1px rgba(228,231,225,.35)}
-.links a.ghost:hover{background:rgba(228,231,225,.12);color:var(--paper)}
+/* ===== metrics ===== */
+.metrics{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.metrics .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);padding-inline:0;max-width:none}
+.metric{background:var(--bg);padding:clamp(1.5rem,4vw,2.6rem) clamp(1rem,3vw,2rem);text-align:center}
+.metric b{display:block;font-size:clamp(2rem,1.3rem + 2.6vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:.5rem}
+.metric span{font-size:.82rem;color:var(--muted);font-weight:500}
+@media (max-width:700px){.metrics .wrap{grid-template-columns:repeat(2,1fr)}}
 
-footer{padding-block:1.5rem 2rem;font-family:var(--sans);font-size:.78rem;color:var(--muted)}
+/* ===== work ===== */
+.work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem)}
+@media (max-width:980px){.work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.work-grid{grid-template-columns:1fr}}
 
-@media (max-width:720px){
-  .entry{grid-template-columns:1fr;gap:1.5rem}
-  .tally{gap:1.25rem 1.75rem}
+.proj{
+  position:relative;display:flex;flex-direction:column;
+  border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  background:var(--surface);transition:border-color .3s,transform .3s,background .3s;
+}
+.proj:hover{border-color:var(--line-2);transform:translateY(-4px);background:var(--surface-2)}
+@media (prefers-reduced-motion:reduce){.proj{transition:none}.proj:hover{transform:none}}
+.viz{aspect-ratio:16/9;background:#0C0C10;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.viz svg{width:100%;height:100%}
+.viz::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(70% 80% at 50% 110%,rgba(123,97,255,.22),transparent 70%);
+  opacity:.7;transition:opacity .35s;
+}
+.proj:hover .viz::after{opacity:1}
+.viz .n{fill:var(--accent);opacity:.85}
+.viz .n2{fill:#fff;opacity:.28}
+.viz .e{stroke:rgba(255,255,255,.2);stroke-width:1;fill:none}
+.viz .ea{stroke:var(--accent);stroke-width:1.25;fill:none;opacity:.75}
+.proj-body{padding:1.3rem clamp(1.1rem,2vw,1.5rem) 1.5rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.cat{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.proj p.desc{font-size:.93rem;color:var(--muted);line-height:1.55}
+.arch{
+  font-family:var(--mono);font-size:.68rem;color:var(--dim);line-height:1.5;
+  border-left:2px solid var(--accent-line);padding-left:.7rem;
+}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:auto;padding-top:.5rem}
+.chips li{font-size:.73rem;font-weight:600;color:#B9B9C6;border:1px solid var(--line);border-radius:999px;padding:.22rem .6rem}
+.proj-link{font-size:.84rem;font-weight:700;text-decoration:none;color:var(--text);display:inline-flex;align-items:center;gap:.35rem}
+.proj-link:hover{color:var(--accent)}
+.proj-link svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8}
+.private{font-size:.78rem;color:var(--dim);display:inline-flex;align-items:center;gap:.4rem;font-weight:500}
+.private i{width:5px;height:5px;border-radius:50%;background:var(--dim);flex:none}
+
+/* ===== featured ===== */
+.feature{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--surface);margin-bottom:clamp(1.25rem,2.5vw,2rem)}
+.feature:last-of-type{margin-bottom:0}
+.feature-top{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+@media (min-width:900px){.feature-top{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}}
+.feature-intro{padding:clamp(1.5rem,3.5vw,2.75rem);border-bottom:1px solid var(--line)}
+@media (min-width:900px){.feature-intro{border-bottom:0;border-right:1px solid var(--line)}}
+.feature-intro .cat{display:block;margin-bottom:.9rem}
+.feature-intro h3{font-size:clamp(1.5rem,1.2rem + 1.3vw,2.2rem);margin-bottom:1rem}
+.qa{margin-top:1.5rem;display:grid;gap:1.25rem}
+.qa div h4{font-family:var(--mono);font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:.4rem}
+.qa div p{font-size:.93rem;color:var(--muted);line-height:1.6}
+.feature-diagram{padding:clamp(1.5rem,3.5vw,2.75rem);display:flex;flex-direction:column;justify-content:center;background:#0C0C10}
+.flow{display:grid;gap:.4rem}
+.flow-row{
+  display:flex;align-items:center;gap:.75rem;
+  border:1px solid var(--line);border-radius:11px;padding:.7rem .9rem;background:var(--surface);
+}
+.flow-row .tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);min-width:74px}
+.flow-row .val{font-size:.87rem;font-weight:600;letter-spacing:-.01em}
+.flow-row.accent{border-color:var(--accent-line);background:var(--accent-soft)}
+.flow-arrow{height:14px;border-left:1px dashed var(--line-2);margin-left:1.4rem}
+
+/* ===== stack ===== */
+.stack-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(1.5rem,3vw,2.5rem)}
+@media (min-width:940px){.stack-layout{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:start}}
+.stack-groups{display:grid;gap:1.75rem}
+.stack-group h3{font-size:.9rem;font-weight:700;color:var(--muted);margin-bottom:.85rem;letter-spacing:.01em}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{
+  border:1px solid var(--line);border-radius:10px;padding:.52rem .9rem;
+  font-size:.87rem;font-weight:600;letter-spacing:-.01em;color:#C8C8D4;
+  background:var(--surface);transition:border-color .2s,color .2s,background .2s,transform .2s;
+}
+.pill:hover,.pill:focus-visible,.pill.active{border-color:var(--accent-line);color:#fff;background:var(--accent-soft);transform:translateY(-2px)}
+.stack-detail{
+  border:1px solid var(--line);border-radius:16px;padding:clamp(1.25rem,3vw,1.75rem);
+  background:var(--surface);position:sticky;top:calc(var(--nav-h) + 16px);min-height:170px;
+}
+.stack-detail .eyebrow{display:block;margin-bottom:.8rem}
+.stack-detail h4{font-size:1.2rem;font-weight:800;letter-spacing:-.025em;margin-bottom:.6rem}
+.stack-detail p{font-size:.92rem;color:var(--muted);line-height:1.6}
+@media (max-width:939px){.stack-detail{position:static}}
+
+/* ===== principles ===== */
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+@media (max-width:760px){.principles{grid-template-columns:1fr}}
+.principle{background:var(--surface);padding:clamp(1.5rem,3.5vw,2.5rem);transition:background .3s}
+.principle:hover{background:var(--surface-2)}
+.principle .num{font-family:var(--mono);font-size:.75rem;color:var(--accent);letter-spacing:.1em;margin-bottom:1.1rem;display:block}
+.principle h3{margin-bottom:.7rem}
+.principle p{font-size:.94rem;color:var(--muted);line-height:1.62}
+
+/* ===== build grid ===== */
+.build-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+@media (max-width:1000px){.build-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.build-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.build-cell{background:var(--surface);padding:1.4rem 1.1rem;display:flex;flex-direction:column;gap:.55rem;transition:background .25s}
+.build-cell:hover{background:var(--accent-soft)}
+.build-cell b{font-size:.94rem;font-weight:700;letter-spacing:-.015em}
+.build-cell span{font-size:.78rem;color:var(--dim);line-height:1.45}
+
+/* ===== architecture ===== */
+.arch-stack{display:grid;gap:.5rem;max-width:820px;margin-inline:auto}
+.layer{
+  border:1px solid var(--line);border-radius:14px;background:var(--surface);
+  padding:1rem clamp(1rem,2.5vw,1.6rem);
+  display:grid;grid-template-columns:120px 1fr;gap:.5rem 1.25rem;align-items:center;
+  transition:border-color .3s,background .3s;
+}
+.layer:hover{border-color:var(--accent-line);background:var(--surface-2)}
+.layer .lname{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+.layer .lval{display:flex;flex-wrap:wrap;gap:.4rem}
+.layer .lval span{font-size:.82rem;font-weight:600;color:#C8C8D4;border:1px solid var(--line);border-radius:8px;padding:.25rem .6rem}
+.layer-join{height:16px;border-left:1px dashed var(--line-2);margin-left:calc(clamp(1rem,2.5vw,1.6rem) + 10px)}
+@media (max-width:620px){
+  .layer{grid-template-columns:1fr}
+  .layer-join{margin-left:1.4rem}
+}
+
+/* ===== ai ===== */
+.ai-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(2rem,4vw,3rem)}
+@media (min-width:900px){.ai-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.ai-list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ai-item{background:var(--surface);padding:1.2rem clamp(1.1rem,2.5vw,1.6rem);display:flex;gap:1rem;align-items:flex-start}
+.ai-item .k{font-family:var(--mono);font-size:.68rem;color:var(--accent);padding-top:.25rem;min-width:26px}
+.ai-item b{display:block;font-size:.95rem;font-weight:700;letter-spacing:-.015em;margin-bottom:.25rem}
+.ai-item span{font-size:.87rem;color:var(--muted);line-height:1.55}
+
+/* ===== timeline ===== */
+.timeline{display:flex;flex-wrap:wrap;gap:.5rem;align-items:stretch}
+.tl-step{
+  flex:1 1 150px;border:1px solid var(--line);border-radius:13px;background:var(--surface);
+  padding:1.1rem 1rem;position:relative;transition:border-color .3s,background .3s;
+}
+.tl-step:hover{border-color:var(--accent-line);background:var(--surface-2)}
+.tl-step .i{font-family:var(--mono);font-size:.65rem;color:var(--dim);display:block;margin-bottom:.5rem}
+.tl-step b{font-size:.92rem;font-weight:700;letter-spacing:-.015em;display:block}
+.tl-step:last-child{border-color:var(--accent-line);background:var(--accent-soft)}
+
+/* ===== contact ===== */
+.contact{position:relative;overflow:hidden;text-align:center}
+.contact::before{
+  content:'';position:absolute;left:50%;bottom:-60%;transform:translateX(-50%);
+  width:min(900px,130vw);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(123,97,255,.20),transparent 65%);pointer-events:none;
+}
+.contact .wrap{position:relative}
+.contact h2{max-width:18ch;margin-inline:auto;margin-bottom:1.2rem}
+.contact .lede{margin-inline:auto;margin-bottom:2.4rem;text-align:center}
+.contact-cta{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.contact-meta{
+  display:flex;flex-wrap:wrap;gap:.75rem 2.5rem;justify-content:center;
+  margin-top:3rem;padding-top:2.25rem;border-top:1px solid var(--line);
+}
+.contact-meta div{text-align:left}
+.contact-meta dt{font-family:var(--mono);font-size:.65rem;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);margin-bottom:.3rem}
+.contact-meta dd{margin:0;font-size:.95rem;font-weight:600}
+.contact-meta a{text-decoration:none}
+.contact-meta a:hover{color:var(--accent)}
+
+/* ===== footer ===== */
+footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var(--surface)}
+.foot{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
+.foot-id b{display:block;font-weight:800;letter-spacing:-.025em;font-size:1.02rem;margin-bottom:.25rem}
+.foot-id span{font-size:.85rem;color:var(--muted)}
+.foot-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.foot-links a{text-decoration:none;font-size:.87rem;color:var(--muted)}
+.foot-links a:hover{color:var(--text)}
+.foot-bottom{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--dim)}
+
+/* ===== reveal ===== */
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.8,.3,1),transform .7s cubic-bezier(.2,.8,.3,1)}
+  .reveal.in{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 
-<header class="wrap masthead">
-  <p class="sig">Shailesh Khandar</p>
-  <nav>
-    <a href="#work">Work</a>
-    <a href="#approach">Approach</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mark">SK</span>Shailesh Khandar</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#engineering">Engineering</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's Talk</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+  </div>
 </header>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+  <a href="#work">Work</a>
+  <a href="#engineering">Engineering</a>
+  <a href="#stack">Stack</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact">Let's Talk</a>
+</nav>
 
-<main>
-  <section class="wrap hero">
-    <h1>Nine systems in production.</h1>
-    <p class="deck">For over ten years I've built and run business software end to end — commerce, CRM, HR, training, automation, ERP, real estate and community platforms — choosing the runtime that fits the problem rather than the one I already know, then containerising it and taking it to production myself.</p>
-    <ul class="tally">
-      <li><b>10+</b>years shipping software</li>
-      <li><b>9</b>live products</li>
-      <li><b>4</b>server languages</li>
-      <li><b>13</b>technologies in use</li>
-    </ul>
-  </section>
+<main id="main">
 
-  <section class="wrap">
-    <div class="matrix">
-      <div class="matrix-intro">
-        <h2>What runs where</h2>
-        <p>Every technology, mapped against the product it ships in.</p>
-      </div>
-      <div class="scroller">
-        <table class="grid">
-          <caption class="ui" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Technology usage across six projects</caption>
-          <thead>
-            <tr>
-              <th scope="col">Technology</th>
-              <th scope="col"><span>Commerce</span></th>
-              <th scope="col"><span>TrainIQ</span></th>
-              <th scope="col"><span>HRMS</span></th>
-              <th scope="col"><span>CRM</span></th>
-              <th scope="col"><span>Automate</span></th>
-              <th scope="col"><span>Heartlynks</span></th>
-              <th scope="col"><span>Cabinets</span></th>
-              <th scope="col"><span>FlexMat</span></th>
-              <th scope="col"><span>Estate</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="band"><th colspan="10" scope="colgroup">Interface</th></tr>
-            <tr class="tech"><th scope="row">Next.js</th>
-              <td class="cell on" style="--d:0"><i></i></td><td class="cell on" style="--d:1"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:2"><i></i></td><td class="cell on" style="--d:3"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:4"><i></i></td></tr>
-            <tr class="tech"><th scope="row">Vue.js</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:5"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:6"><i></i></td><td class="cell"><i></i></td></tr>
-            <tr class="tech"><th scope="row">Inertia.js</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:7"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
-
-            <tr class="band"><th colspan="10" scope="colgroup">Server</th></tr>
-            <tr class="tech"><th scope="row">Laravel</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:8"><i></i></td><td class="cell on" style="--d:9"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:10"><i></i></td><td class="cell on" style="--d:11"><i></i></td><td class="cell"><i></i></td></tr>
-            <tr class="tech"><th scope="row">NestJS</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:12"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
-            <tr class="tech"><th scope="row">Python</th>
-              <td class="cell"><i></i></td><td class="cell on" style="--d:13"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
-            <tr class="tech"><th scope="row">Go — Fiber</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:14"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
-
-            <tr class="tech"><th scope="row">Node.js</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:15"><i></i></td></tr>
-            <tr class="band"><th colspan="10" scope="colgroup">Data</th></tr>
-            <tr class="tech"><th scope="row">MySQL</th>
-              <td class="cell on" style="--d:16"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:17"><i></i></td><td class="cell on" style="--d:18"><i></i></td><td class="cell on" style="--d:19"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:20"><i></i></td><td class="cell on" style="--d:21"><i></i></td><td class="cell"><i></i></td></tr>
-            <tr class="tech"><th scope="row">PostgreSQL</th>
-              <td class="cell"><i></i></td><td class="cell on" style="--d:22"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:23"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:24"><i></i></td></tr>
-
-            <tr class="band"><th colspan="10" scope="colgroup">Cache and streaming</th></tr>
-            <tr class="tech"><th scope="row">Redis</th>
-              <td class="cell on" style="--d:25"><i></i></td><td class="cell on" style="--d:26"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:27"><i></i></td><td class="cell on" style="--d:28"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
-            <tr class="tech"><th scope="row">Apache Kafka</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:29"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
-
-            <tr class="band"><th colspan="10" scope="colgroup">Desktop</th></tr>
-            <tr class="tech"><th scope="row">Screenshot monitor agent</th>
-              <td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell on" style="--d:30"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td><td class="cell"><i></i></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="matrix-foot">
-        <h3>Shipped on</h3>
-        <ul>
-          <li>AWS</li>
-          <li>Google Cloud</li>
-          <li>Docker</li>
-          <li>Managed cloud hosting</li>
-        </ul>
-      </div>
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow">Full-Stack Product Engineer</span>
+    <h1>Building software that runs real businesses.</h1>
+    <p class="lede">10+ years building and operating production-grade SaaS, ERP, CRM, commerce and automation systems across modern web stacks.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#work">View My Work</a>
+      <a class="btn btn-ghost" href="#contact">Let's Work Together</a>
     </div>
-  </section>
+    <a class="link-sub" href="#engineering">Explore my engineering approach →</a>
 
-  <section class="wrap work" id="work">
-    <h2>Work</h2>
-    <p class="lede">Each product listed by the layer it runs on, from browser down to storage.</p>
-
-    <article class="entry">
-      <div>
-        <p class="domain">Commerce</p>
-        <h3>Lifeguard Commerce</h3>
-        <a class="visit" href="https://ecom.lifeguardcrm.com/" target="_blank" rel="noopener">ecom.lifeguardcrm.com</a>
-        <p class="note">Customer-facing storefront for the Lifeguard product range, with catalog browsing, cart and checkout served from a single Next.js application.</p>
+    <div class="pipeline">
+      <p class="pipeline-label">Where I work — end to end</p>
+      <div class="pipe">
+        <div class="node"><b>Browser</b><span>Next.js · Vue</span></div>
+        <div class="node"><b>API</b><span>REST · Auth</span></div>
+        <div class="node hot"><b>Services</b><span>Laravel · Nest · Go</span></div>
+        <div class="node"><b>Data</b><span>MySQL · Postgres</span></div>
+        <div class="node"><b>Infra</b><span>Docker · AWS · GCP</span></div>
       </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Next.js</dd>
-        <dt>Server</dt><dd>Next.js</dd>
-        <dt>Data</dt><dd>MySQL</dd>
-        <dt>Cache</dt><dd>Redis</dd>
-      </dl>
-    </article>
+      <div class="pipe-track" aria-hidden="true"><span class="pipe-dot"></span></div>
+    </div>
+  </div>
+</section>
 
-    <article class="entry">
-      <div>
-        <p class="domain">Training</p>
-        <h3>TrainIQ</h3>
-        <a class="visit" href="https://trainiq.ae/" target="_blank" rel="noopener">trainiq.ae</a>
-        <p class="note">Training and assessment platform, with a Python service handling the heavier processing behind a Next.js front end.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Next.js</dd>
-        <dt>Server</dt><dd>Python</dd>
-        <dt>Data</dt><dd>PostgreSQL</dd>
-        <dt>Cache</dt><dd>Redis</dd>
-      </dl>
-    </article>
+<!-- ================= METRICS ================= -->
+<section class="metrics" aria-label="Experience at a glance">
+  <div class="wrap">
+    <div class="metric"><b data-count="10" data-suffix="+">10+</b><span>Years shipping software</span></div>
+    <div class="metric"><b data-count="9" data-suffix="">9</b><span>Live products</span></div>
+    <div class="metric"><b data-count="4" data-suffix="+">4+</b><span>Server-side languages</span></div>
+    <div class="metric"><b data-count="13" data-suffix="+">13+</b><span>Technologies in production</span></div>
+  </div>
+</section>
 
-    <article class="entry">
-      <div>
-        <p class="domain">People operations</p>
-        <h3>Lifeguard HRMS</h3>
-        <a class="visit" href="https://app.lifeguardhrms.cloud/" target="_blank" rel="noopener">app.lifeguardhrms.cloud</a>
-        <p class="note">HR management system covering employee records, attendance and productivity, paired with a desktop agent that captures periodic screenshots and reports activity back to the server.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Vue.js</dd>
-        <dt>Server</dt><dd>Laravel</dd>
-        <dt>Data</dt><dd>MySQL</dd>
-        <dt>Desktop</dt><dd>Screenshot monitor agent</dd>
-      </dl>
-    </article>
-
-    <article class="entry">
-      <div>
-        <p class="domain">Sales</p>
-        <h3>Lifeguard CRM</h3>
-        <a class="visit" href="https://app.lifeguardcrm.com/" target="_blank" rel="noopener">app.lifeguardcrm.com</a>
-        <p class="note">Lead and customer management built as a monolith, using Inertia to drive a single-page interface without splitting the codebase into a separate API.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Inertia.js</dd>
-        <dt>Server</dt><dd>Laravel</dd>
-        <dt>Data</dt><dd>MySQL</dd>
-      </dl>
-    </article>
-
-    <article class="entry">
-      <div>
-        <p class="domain">Automation</p>
-        <h3>The Automate</h3>
-        <a class="visit" href="https://user.theautomate.ai/login" target="_blank" rel="noopener">user.theautomate.ai</a>
-        <p class="note">Workflow automation product where users configure and run recurring jobs, with a NestJS API separated from the Next.js client.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Next.js</dd>
-        <dt>Server</dt><dd>NestJS</dd>
-        <dt>Data</dt><dd>MySQL</dd>
-        <dt>Cache</dt><dd>Redis</dd>
-      </dl>
-    </article>
-
-    <article class="entry">
-      <div>
-        <p class="domain">Community</p>
-        <h3>Heartlynks Community</h3>
-        <a class="visit" href="https://community.heartlynks.org/" target="_blank" rel="noopener">community.heartlynks.org</a>
-        <p class="note">Community platform built for throughput — a Go service on Fiber handles requests, and Kafka carries events between producers and consumers so activity feeds and notifications stay decoupled.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Next.js</dd>
-        <dt>Server</dt><dd>Go — Fiber</dd>
-        <dt>Data</dt><dd>PostgreSQL</dd>
-        <dt>Streaming</dt><dd>Apache Kafka</dd>
-        <dt>Cache</dt><dd>Redis</dd>
-      </dl>
-    </article>
-
-    <article class="entry">
-      <div>
-        <p class="domain">Commerce</p>
-        <h3>Carolina Cabinet Warehouse</h3>
-        <a class="visit" href="https://carolinacabinetwarehouse.com/" target="_blank" rel="noopener">carolinacabinetwarehouse.com</a>
-        <p class="note">Retail cabinet storefront built on a custom PHP stack rather than a hosted cart, so catalogue structure, bulk pricing and checkout follow how the business actually sells instead of how a template expects it to.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Bootstrap, jQuery</dd>
-        <dt>Server</dt><dd>PHP &mdash; Laravel</dd>
-        <dt>Data</dt><dd>MySQL</dd>
-        <dt>Analytics</dt><dd>GTM, GA, Meta Pixel</dd>
-      </dl>
-    </article>
-
-    <article class="entry">
-      <div>
-        <p class="domain">Manufacturing ERP</p>
-        <h3>FlexMat ERP</h3>
-        <span class="visit muted-link">flexmat.flexgrew.cloud &mdash; private</span>
-        <p class="note">Complete ERP for mechanical and fabrication businesses &mdash; materials, production and the paperwork around them in a single system. Runs behind a login for customer tenants, so there is no public demo.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Vue.js &mdash; Vite</dd>
-        <dt>Server</dt><dd>PHP &mdash; Laravel</dd>
-        <dt>Data</dt><dd>MySQL</dd>
-      </dl>
-    </article>
-
-    <article class="entry">
-      <div>
-        <p class="domain">Real estate</p>
-        <h3>Flexgrew Estate</h3>
-        <a class="visit" href="https://flexestate.flexgrew.com/" target="_blank" rel="noopener">flexestate.flexgrew.com</a>
-        <p class="note">Investment analysis platform for property investors &mdash; cash flow, cap rate, cash-on-cash, DSCR and flip projections run against a deal in seconds, with a pipeline that tracks it from first look through to close.</p>
-      </div>
-      <dl class="layers">
-        <dt>Interface</dt><dd>Next.js</dd>
-        <dt>Server</dt><dd>Node.js</dd>
-        <dt>Data</dt><dd>PostgreSQL</dd>
-      </dl>
-    </article>
-  </section>
-
-  <section class="wrap approach" id="approach">
-    <h2>How I work</h2>
-    <div class="prose">
-      <p>Over ten years I've moved between interface, server and infrastructure rather than settling into one of them. That was deliberate. Most of the problems worth solving in business software sit at the seams — between the client and the API, between the API and the database, between the code and the machine it runs on — and those seams are invisible if you only ever work on one side.</p>
-      <p>It also means I pick the stack for the job rather than the job for the stack. A CRM that one small team maintains is better as a Laravel monolith with Inertia than as a split API and client, because there is no second team to justify the split. A community feed with unpredictable load is better in Go with Kafka carrying events between services. I've shipped both, and the reasoning was the same each time: choose what the people who inherit it can actually operate.</p>
-      <p>I deploy and run what I build. Containers, AWS and Google Cloud, managed hosting where the simpler thing is the right thing. Handing over a repository and calling it finished has never been the job.</p>
+<!-- ================= WORK ================= -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">Selected Work</span>
+      <h2>Products in production.</h2>
+      <p class="lede">Nine systems that real businesses depend on daily. Several are authenticated internal platforms, shown here without public links.</p>
     </div>
 
-    <div class="practice">
-      <section>
-        <h3>Product engineering</h3>
-        <ul>
-          <li>Next.js and React interfaces</li>
-          <li>Vue.js and Inertia</li>
-          <li>Multi-tenant SaaS applications</li>
-          <li>Authentication and role-based access</li>
-          <li>Third-party API integration</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Systems and data</h3>
-        <ul>
-          <li>Laravel, NestJS, Go (Fiber), Python</li>
-          <li>REST API design and versioning</li>
-          <li>MySQL and PostgreSQL schema design</li>
-          <li>Query tuning and Redis caching</li>
-          <li>Event streaming with Apache Kafka</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Deployment</h3>
-        <ul>
-          <li>Docker images and Compose</li>
-          <li>AWS and Google Cloud</li>
-          <li>Managed cloud hosting</li>
-          <li>Environment and secrets management</li>
-          <li>Release and rollback process</li>
-        </ul>
-      </section>
+    <div class="work-grid">
 
-      <section>
-        <h3>AI and automation</h3>
-        <ul>
-          <li>AI agents and chatbots</li>
-          <li>Workflow automation with n8n</li>
-          <li>Custom automation services</li>
-          <li>LLM integration into existing products</li>
-          <li>Custom CRM and ERP builds</li>
-        </ul>
-      </section>
-    </div>
-  </section>
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <path class="ea" d="M60 40 H260 M60 40 V140 M260 40 V140 M60 90 H260"/>
+            <circle class="n" cx="60" cy="40" r="5"/><circle class="n" cx="260" cy="40" r="5"/>
+            <circle class="n2" cx="160" cy="90" r="4"/><circle class="n" cx="60" cy="140" r="5"/>
+            <circle class="n2" cx="260" cy="140" r="4"/>
+            <rect class="e" x="140" y="70" width="40" height="40" rx="6"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">Commerce / SaaS</span>
+          <h3>Lifeguard Commerce</h3>
+          <p class="desc">Customer-facing commerce platform with catalog, cart and checkout workflows.</p>
+          <p class="arch">Next.js → NestJS API → MySQL · Redis</p>
+          <ul class="chips"><li>Next.js</li><li>NestJS</li><li>MySQL</li><li>Redis</li></ul>
+          <a class="proj-link" href="https://ecom.lifeguardcrm.com/" target="_blank" rel="noopener">Visit site <svg viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
 
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <h2>Available for new work.</h2>
-      <p>Contract, full-time or advisory. Send me the problem rather than the job spec, and I'll tell you honestly whether ten years of this makes me the right person for it.</p>
-      <ul class="links">
-        <li><a href="mailto:khandarshailesh111@gmail.com">khandarshailesh111@gmail.com</a></li>
-        <li><a class="ghost" href="tel:+918160694389">+91 81606 94389</a></li>
-      </ul>
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <path class="e" d="M50 130 L110 70 L170 105 L230 45 L280 80"/>
+            <path class="ea" d="M50 90 H280"/>
+            <circle class="n" cx="110" cy="70" r="5"/><circle class="n" cx="230" cy="45" r="5"/>
+            <circle class="n2" cx="170" cy="105" r="4"/><circle class="n2" cx="50" cy="130" r="4"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">Training / SaaS</span>
+          <h3>TrainIQ</h3>
+          <p class="desc">Training and assessment platform, with heavier processing handled by a dedicated Python service.</p>
+          <p class="arch">Next.js → Python services → PostgreSQL · Redis</p>
+          <ul class="chips"><li>Next.js</li><li>Python</li><li>PostgreSQL</li><li>Redis</li></ul>
+          <a class="proj-link" href="https://trainiq.ae/" target="_blank" rel="noopener">Visit site <svg viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <path class="ea" d="M160 90 L80 50 M160 90 L240 50 M160 90 L80 130 M160 90 L240 130"/>
+            <circle class="n" cx="160" cy="90" r="7"/>
+            <circle class="n2" cx="80" cy="50" r="4"/><circle class="n2" cx="240" cy="50" r="4"/>
+            <circle class="n2" cx="80" cy="130" r="4"/><circle class="n2" cx="240" cy="130" r="4"/>
+            <rect class="e" x="30" y="35" width="260" height="110" rx="10"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">HR / Workforce</span>
+          <h3>Lifeguard HRMS</h3>
+          <p class="desc">Workforce management covering employee records, attendance and productivity, with a companion desktop agent reporting activity to the server.</p>
+          <p class="arch">Vue SPA → Laravel API → MySQL · desktop agent ingest</p>
+          <ul class="chips"><li>Vue.js</li><li>Laravel</li><li>MySQL</li><li>Desktop agent</li></ul>
+          <p class="private"><i></i>Private / authenticated production system</p>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <rect class="e" x="50" y="45" width="220" height="90" rx="10"/>
+            <path class="ea" d="M50 75 H270 M50 105 H270"/>
+            <circle class="n" cx="80" cy="60" r="4"/><circle class="n" cx="80" cy="90" r="4"/><circle class="n" cx="80" cy="120" r="4"/>
+            <circle class="n2" cx="240" cy="90" r="5"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">CRM / Sales</span>
+          <h3>Lifeguard CRM</h3>
+          <p class="desc">Lead and customer management built as a single deployable, using Inertia to drive a single-page interface without splitting the codebase.</p>
+          <p class="arch">Inertia monolith → Laravel → MySQL</p>
+          <ul class="chips"><li>Laravel</li><li>Inertia.js</li><li>MySQL</li></ul>
+          <p class="private"><i></i>Private / authenticated production system</p>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <path class="ea" d="M55 90 H105 M135 90 H185 M215 90 H265"/>
+            <rect class="e" x="105" y="70" width="30" height="40" rx="5"/>
+            <rect class="e" x="185" y="70" width="30" height="40" rx="5"/>
+            <circle class="n" cx="50" cy="90" r="6"/><circle class="n" cx="270" cy="90" r="6"/>
+            <circle class="n2" cx="160" cy="50" r="4"/><circle class="n2" cx="160" cy="130" r="4"/>
+            <path class="e" d="M160 60 V70 M160 110 V120"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">Automation / SaaS</span>
+          <h3>The Automate</h3>
+          <p class="desc">Workflow automation where users configure and run recurring jobs, with the API kept independent of the client.</p>
+          <p class="arch">Next.js client → NestJS API → MySQL · Redis</p>
+          <ul class="chips"><li>Next.js</li><li>NestJS</li><li>MySQL</li><li>Redis</li></ul>
+          <p class="private"><i></i>Private / authenticated production system</p>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <path class="ea" d="M160 45 V135"/>
+            <path class="e" d="M100 65 H220 M100 90 H220 M100 115 H220"/>
+            <circle class="n" cx="160" cy="45" r="6"/><circle class="n" cx="160" cy="135" r="6"/>
+            <circle class="n2" cx="100" cy="65" r="4"/><circle class="n2" cx="220" cy="65" r="4"/>
+            <circle class="n2" cx="100" cy="115" r="4"/><circle class="n2" cx="220" cy="115" r="4"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">Community / Platform</span>
+          <h3>Heartlynks Community</h3>
+          <p class="desc">Community platform built for throughput, with events carried between services rather than handled inline on the write path.</p>
+          <p class="arch">Next.js → Go (Fiber) → PostgreSQL · Redis · Kafka</p>
+          <ul class="chips"><li>Next.js</li><li>Go / Fiber</li><li>PostgreSQL</li><li>Redis</li><li>Kafka</li></ul>
+          <a class="proj-link" href="https://community.heartlynks.org/" target="_blank" rel="noopener">Visit site <svg viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <rect class="e" x="55" y="50" width="60" height="80" rx="6"/>
+            <rect class="e" x="130" y="50" width="60" height="80" rx="6"/>
+            <rect class="ea" x="205" y="50" width="60" height="80" rx="6"/>
+            <path class="e" d="M55 75 H115 M130 75 H190 M205 75 H265"/>
+            <circle class="n" cx="235" cy="105" r="5"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">E-commerce</span>
+          <h3>Carolina Cabinet Warehouse</h3>
+          <p class="desc">Public storefront for a US cabinet retailer — deep catalog across cabinets, range hoods and hardware, with quoting, design requests and checkout.</p>
+          <p class="arch">Laravel application → MySQL</p>
+          <ul class="chips"><li>Laravel</li><li>MySQL</li></ul>
+          <a class="proj-link" href="https://carolinacabinetwarehouse.com/" target="_blank" rel="noopener">Visit site <svg viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <path class="ea" d="M60 130 V60 H130 V95 H200 V50 H265 V130 Z"/>
+            <path class="e" d="M60 130 H265"/>
+            <circle class="n" cx="130" cy="60" r="4"/><circle class="n" cx="200" cy="95" r="4"/><circle class="n" cx="265" cy="50" r="4"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">Manufacturing ERP</span>
+          <h3>FlexMat ERP</h3>
+          <p class="desc">Complete ERP for the mechanical industry, covering production, materials, inventory and the reporting that connects them in one system.</p>
+          <p class="private"><i></i>Private / authenticated production system</p>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+            <path class="e" d="M70 125 V85 L110 60 L150 85 V125 Z"/>
+            <path class="ea" d="M175 125 V70 L215 45 L255 70 V125 Z"/>
+            <path class="e" d="M60 125 H270"/>
+            <circle class="n" cx="215" cy="95" r="5"/><circle class="n2" cx="110" cy="100" r="4"/>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <span class="cat">Real Estate / Analytics</span>
+          <h3>Flexgrew Estate</h3>
+          <p class="desc">Property portal built around analysis rather than listings — comparing properties on the numbers that decide whether a deal is worth doing.</p>
+          <a class="proj-link" href="https://flexestate.flexgrew.com/" target="_blank" rel="noopener">Visit site <svg viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ================= FEATURED ================= -->
+<section class="section" id="engineering">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">Case Studies</span>
+      <h2>Three systems, three different answers.</h2>
+      <p class="lede">The same engineer, three deliberately different architectures. Each choice came from the operating conditions, not from preference.</p>
+    </div>
+
+    <article class="feature reveal">
+      <div class="feature-top">
+        <div class="feature-intro">
+          <span class="cat">Community / Platform</span>
+          <h3>Heartlynks Community</h3>
+          <p class="desc lede">A social platform where one action fans out into many downstream effects.</p>
+          <div class="qa">
+            <div>
+              <h4>Problem</h4>
+              <p>In a community product, a single post triggers feed updates, notifications and counters for an unpredictable number of other users. Doing that work inside the request means the person posting waits for everyone else's bookkeeping.</p>
+            </div>
+            <div>
+              <h4>What was built</h4>
+              <p>A Go service on Fiber handles the HTTP path and does only what the caller needs. Everything downstream is published to Kafka and consumed independently, so a slow or failing consumer never blocks a write.</p>
+            </div>
+            <div>
+              <h4>Why these choices</h4>
+              <p>Go for predictable memory and concurrency under fan-out. Kafka because the events are worth replaying and the consumers will keep multiplying. PostgreSQL for relational integrity, Redis for the reads that repeat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature-diagram">
+          <div class="flow">
+            <div class="flow-row"><span class="tag">Client</span><span class="val">Next.js</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row accent"><span class="tag">Service</span><span class="val">Go — Fiber</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Events</span><span class="val">Apache Kafka</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Data</span><span class="val">PostgreSQL · Redis</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Infra</span><span class="val">Docker · Cloud</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="feature reveal">
+      <div class="feature-top">
+        <div class="feature-intro">
+          <span class="cat">Automation / SaaS</span>
+          <h3>The Automate</h3>
+          <p class="desc lede">Scheduled, long-running work that must not be tied to whoever opened the browser.</p>
+          <div class="qa">
+            <div>
+              <h4>Problem</h4>
+              <p>Automation jobs run on their own schedule and can outlive any session. A user configures a workflow once and expects it to keep running whether or not anyone is watching.</p>
+            </div>
+            <div>
+              <h4>What was built</h4>
+              <p>A NestJS API that owns scheduling, execution and job state, deliberately separated from the Next.js client. The interface configures work; it never performs it. Redis carries queueing and the state that jobs check between runs.</p>
+            </div>
+            <div>
+              <h4>Why these choices</h4>
+              <p>A split API rather than a monolith, because the execution surface has a different lifecycle from the UI and needs to scale and be restarted on its own terms. NestJS for the module structure — job definitions multiply fast, and this keeps that growth navigable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature-diagram">
+          <div class="flow">
+            <div class="flow-row"><span class="tag">Client</span><span class="val">Next.js</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row accent"><span class="tag">API</span><span class="val">NestJS</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Queue</span><span class="val">Redis</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Data</span><span class="val">MySQL</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Infra</span><span class="val">Docker · Cloud</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="feature reveal">
+      <div class="feature-top">
+        <div class="feature-intro">
+          <span class="cat">HR / Workforce</span>
+          <h3>Lifeguard HRMS</h3>
+          <p class="desc lede">A web application with a second client that isn't a browser.</p>
+          <div class="qa">
+            <div>
+              <h4>Problem</h4>
+              <p>Workforce productivity data originates on employee machines, not in a web session. That means an ingest path with different assumptions: intermittent connectivity, unattended clients, and data that must not be lost when the network drops.</p>
+            </div>
+            <div>
+              <h4>What was built</h4>
+              <p>A Laravel application serving a Vue interface for HR staff, plus a separate authenticated ingest surface for the desktop monitoring agent. The two clients share a domain model but almost nothing else.</p>
+            </div>
+            <div>
+              <h4>Why these choices</h4>
+              <p>A Laravel monolith because one team maintains it and the domain is relational throughout — employees, attendance, payroll periods. Splitting it would have added operational cost with nothing to buy. Monitoring data is sensitive, so the agent's surface is isolated and separately authenticated.</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature-diagram">
+          <div class="flow">
+            <div class="flow-row"><span class="tag">Clients</span><span class="val">Vue.js · Desktop agent</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row accent"><span class="tag">App</span><span class="val">Laravel</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Data</span><span class="val">MySQL</span></div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-row"><span class="tag">Infra</span><span class="val">Docker · Cloud</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= PRINCIPLES ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">How I Engineer</span>
+      <h2>Four things I hold to.</h2>
+    </div>
+    <div class="principles reveal">
+      <article class="principle">
+        <span class="num">01</span>
+        <h3>Architecture follows the problem.</h3>
+        <p>Not the framework, not the trend, not what I used last time. Microservices for a three-person team are a tax with no return. A monolith under genuine fan-out is a bottleneck. The operating conditions decide, and they're different on every project.</p>
+      </article>
+      <article class="principle">
+        <span class="num">02</span>
+        <h3>Production is part of the product.</h3>
+        <p>Code that works on a laptop is half a deliverable. Containers, environments, secrets, releases and rollbacks are engineering, not an afterthought handed to someone else. I ship it and I run it.</p>
+      </article>
+      <article class="principle">
+        <span class="num">03</span>
+        <h3>Simple systems are usually better systems.</h3>
+        <p>Every moving part is a thing that fails at 2am and a thing the next engineer has to learn. I add distribution, caching and queues when the load justifies them — and I can tell you what specifically justified each one.</p>
+      </article>
+      <article class="principle">
+        <span class="num">04</span>
+        <h3>I build for the team that inherits the code.</h3>
+        <p>Most software outlives the person who wrote it. In ERP and CRM work especially, the hard part is understanding the process a company already runs on paper or in someone's head, and deciding what to keep. Software that contradicts how a business works gets abandoned, however well it's built.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section class="section" id="stack">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">Engineering Stack</span>
+      <h2>Technologies I run in production.</h2>
+      <p class="lede">Hover or focus any technology to see where it's actually used.</p>
+    </div>
+
+    <div class="stack-layout">
+      <div class="stack-groups reveal">
+        <div class="stack-group">
+          <h3>Frontend</h3>
+          <div class="pills">
+            <button class="pill" data-t="Next.js" data-d="Primary front end for Lifeguard Commerce, TrainIQ, The Automate and Heartlynks Community — server-rendered pages against separate APIs.">Next.js</button>
+            <button class="pill" data-t="React" data-d="The component layer underneath the Next.js applications, including shared interface patterns across products.">React</button>
+            <button class="pill" data-t="Vue.js" data-d="The HR-facing interface of Lifeguard HRMS, covering employee records, attendance and productivity views.">Vue.js</button>
+            <button class="pill" data-t="Inertia.js" data-d="Drives the single-page interface of Lifeguard CRM without splitting the codebase into a separate API and client.">Inertia.js</button>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Backend</h3>
+          <div class="pills">
+            <button class="pill" data-t="Laravel" data-d="Lifeguard CRM, Lifeguard HRMS and Carolina Cabinet Warehouse. My default where the domain is relational and one team maintains it.">Laravel</button>
+            <button class="pill" data-t="PHP" data-d="The language under the Laravel systems — a decade of production work across CRM, HR and commerce domains.">PHP</button>
+            <button class="pill" data-t="Node.js" data-d="The runtime behind the NestJS services and the build tooling across the Next.js applications.">Node.js</button>
+            <button class="pill" data-t="NestJS" data-d="API layer for Lifeguard Commerce and The Automate, where job execution and scheduling need a lifecycle independent of the UI.">NestJS</button>
+            <button class="pill" data-t="Python" data-d="The processing service behind TrainIQ, handling work too heavy to sit in the request path.">Python</button>
+            <button class="pill" data-t="Go / Fiber" data-d="The HTTP service for Heartlynks Community, chosen for predictable behaviour under fan-out and concurrent load.">Go / Fiber</button>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Data</h3>
+          <div class="pills">
+            <button class="pill" data-t="MySQL" data-d="Primary store for Lifeguard Commerce, CRM, HRMS, The Automate and Carolina Cabinet Warehouse. Schema design, indexing and query tuning.">MySQL</button>
+            <button class="pill" data-t="PostgreSQL" data-d="Primary store for TrainIQ and Heartlynks Community, where the workload benefits from richer types and stricter constraints.">PostgreSQL</button>
+            <button class="pill" data-t="Redis" data-d="Caching and queueing across Lifeguard Commerce, TrainIQ, The Automate and Heartlynks — hot reads and job state that shouldn't hit the database.">Redis</button>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Infrastructure</h3>
+          <div class="pills">
+            <button class="pill" data-t="Docker" data-d="Containerised builds and releases, so the same image runs in every environment and rollback is a tag change.">Docker</button>
+            <button class="pill" data-t="AWS" data-d="Production hosting, storage and networking for deployed systems, including environment and secrets handling.">AWS</button>
+            <button class="pill" data-t="Google Cloud" data-d="Production hosting for systems where GCP services fit the workload better than the AWS equivalent.">Google Cloud</button>
+            <button class="pill" data-t="Managed cloud hosting" data-d="Where a managed platform is the right answer — smaller systems that don't earn the operational cost of running raw infrastructure.">Managed hosting</button>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Messaging</h3>
+          <div class="pills">
+            <button class="pill" data-t="Apache Kafka" data-d="Carries events between producers and consumers in Heartlynks Community, keeping feeds and notifications off the write path.">Apache Kafka</button>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>AI &amp; Automation</h3>
+          <div class="pills">
+            <button class="pill" data-t="AI agents" data-d="Agents that carry out multi-step tasks inside existing business workflows, rather than sitting beside them as a separate tool.">AI agents</button>
+            <button class="pill" data-t="LLM integrations" data-d="Language models wired into products where they replace manual steps — classification, drafting, extraction — with the surrounding system doing the validation.">LLM integrations</button>
+            <button class="pill" data-t="n8n" data-d="Used where an off-the-shelf node already does the job. Fast to build, easy for a client's own team to read and change.">n8n</button>
+            <button class="pill" data-t="Custom automation" data-d="Written in code where n8n's abstractions get in the way — bespoke pipelines with real error handling, retries and observability.">Custom automation</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="stack-detail reveal" id="stack-detail" aria-live="polite">
+        <span class="eyebrow">In production</span>
+        <h4 id="sd-title">Pick a technology</h4>
+        <p id="sd-body">Hover or focus any technology on the left and this panel will show where and how it's used across the nine systems.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARCHITECTURE ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="s-head reveal" style="margin-inline:auto;text-align:center">
+      <span class="eyebrow">Architecture</span>
+      <h2>From interface to infrastructure.</h2>
+      <p class="lede" style="margin-inline:auto">Every layer of a production system, and what I actually use at each one.</p>
+    </div>
+    <div class="arch-stack reveal">
+      <div class="layer"><span class="lname">User</span><span class="lval"><span>People doing their job</span></span></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer"><span class="lname">Web / Client</span><span class="lval"><span>Next.js</span><span>React</span><span>Vue.js</span><span>Inertia.js</span><span>Desktop agent</span></span></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer"><span class="lname">API</span><span class="lval"><span>REST</span><span>Auth &amp; RBAC</span><span>Tenant isolation</span></span></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer"><span class="lname">Services</span><span class="lval"><span>Laravel</span><span>NestJS</span><span>Go / Fiber</span><span>Python</span></span></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer"><span class="lname">Data &amp; Events</span><span class="lval"><span>MySQL</span><span>PostgreSQL</span><span>Redis</span><span>Apache Kafka</span></span></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer"><span class="lname">Infrastructure</span><span class="lval"><span>Docker</span><span>AWS</span><span>Google Cloud</span><span>Managed hosting</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT I BUILD ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">What I Build</span>
+      <h2>The kinds of systems I take on.</h2>
+    </div>
+    <div class="build-grid reveal">
+      <div class="build-cell"><b>SaaS platforms</b><span>Subscription products built to be operated, not just launched.</span></div>
+      <div class="build-cell"><b>ERP systems</b><span>Production, materials, inventory and reporting in one model.</span></div>
+      <div class="build-cell"><b>CRM systems</b><span>Pipelines and customer data shaped to how a team actually sells.</span></div>
+      <div class="build-cell"><b>Multi-tenant apps</b><span>Tenant isolation designed in at the schema, not bolted on.</span></div>
+      <div class="build-cell"><b>E-commerce</b><span>Catalog, cart, checkout and the operational side behind them.</span></div>
+      <div class="build-cell"><b>Workflow automation</b><span>Scheduled and event-driven work that runs unattended.</span></div>
+      <div class="build-cell"><b>AI-powered apps</b><span>Models placed inside existing workflows where they remove a step.</span></div>
+      <div class="build-cell"><b>Internal business systems</b><span>The unglamorous tools a company runs on every day.</span></div>
+      <div class="build-cell"><b>API platforms</b><span>Versioned, documented interfaces other teams build against.</span></div>
+      <div class="build-cell"><b>Cloud infrastructure</b><span>Containers, environments and releases that survive a handover.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI ================= -->
+<section class="section">
+  <div class="wrap ai-layout">
+    <div class="reveal">
+      <span class="eyebrow" style="display:block;margin-bottom:1rem">AI &amp; Automation</span>
+      <h2 style="margin-bottom:1.2rem">AI that fits into real products.</h2>
+      <p class="lede">Most AI work I do isn't a new product. It's a step removed from an existing one — a form someone was filling by hand, a queue someone was triaging, a report someone was assembling on Friday afternoons.</p>
+      <p class="lede" style="margin-top:1.2rem">That means the interesting engineering is rarely the model call. It's what happens around it: validating output before it touches a database, handling the cases the model gets wrong, and making the whole thing legible to the team that has to trust it.</p>
+    </div>
+    <div class="ai-list reveal">
+      <div class="ai-item"><span class="k">01</span><div><b>AI agents</b><span>Multi-step tasks carried out inside an existing business workflow, with defined boundaries on what they can touch.</span></div></div>
+      <div class="ai-item"><span class="k">02</span><div><b>Chatbots</b><span>Conversational interfaces connected to real application data, not a detached FAQ widget.</span></div></div>
+      <div class="ai-item"><span class="k">03</span><div><b>LLM integrations</b><span>Classification, extraction and drafting wired into products, with validation between the model and the database.</span></div></div>
+      <div class="ai-item"><span class="k">04</span><div><b>n8n workflows</b><span>Used where a standard node already does the job and a client's own team needs to read and change it later.</span></div></div>
+      <div class="ai-item"><span class="k">05</span><div><b>Custom automation</b><span>Written in code where the visual abstraction gets in the way — real error handling, retries and observability.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT / TIMELINE ================= -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">About</span>
+      <h2>Ten years, widening scope.</h2>
+      <p class="lede">I've moved between interface, server and infrastructure rather than settling into one. Most of the problems worth solving sit at the seams between them, and those seams stay invisible if you only ever work one side.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-step"><span class="i">01</span><b>Frontend</b></div>
+      <div class="tl-step"><span class="i">02</span><b>Backend</b></div>
+      <div class="tl-step"><span class="i">03</span><b>Full stack</b></div>
+      <div class="tl-step"><span class="i">04</span><b>Architecture</b></div>
+      <div class="tl-step"><span class="i">05</span><b>Cloud &amp; infrastructure</b></div>
+      <div class="tl-step"><span class="i">06</span><b>Product engineering</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="display:block;margin-bottom:1.2rem">Contact</span>
+      <h2>Have a complex product to build?</h2>
+      <p class="lede">Tell me what you're trying to build, where you're stuck, or what needs to scale. I'll help determine the right technical approach.</p>
+      <div class="contact-cta">
+        <a class="btn btn-primary" href="mailto:khandarshailesh111@gmail.com">Start a conversation</a>
+        <a class="btn btn-ghost" href="tel:+918160694389">+91 81606 94389</a>
+      </div>
+      <dl class="contact-meta">
+        <div><dt>Email</dt><dd><a href="mailto:khandarshailesh111@gmail.com">khandarshailesh111@gmail.com</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+918160694389">+91 81606 94389</a></dd></div>
+        <div><dt>Location</dt><dd>Rajkot, Gujarat, India</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<footer class="wrap">
-  <p>Shailesh Khandar — Full-stack engineer, Rajkot, Gujarat, India</p>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-id">
+        <b>Shailesh Khandar</b>
+        <span>Senior Full-Stack / Product Engineer</span>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#work">Work</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="foot-id">
+        <span><a href="mailto:khandarshailesh111@gmail.com" style="text-decoration:none">khandarshailesh111@gmail.com</a></span><br>
+        <span><a href="tel:+918160694389" style="text-decoration:none">+91 81606 94389</a></span><br>
+        <span>Rajkot, Gujarat, India</span>
+      </div>
+    </div>
+    <p class="foot-bottom">© <span id="yr">2026</span> Shailesh Khandar. All rights reserved.</p>
+  </div>
 </footer>
 
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* sticky nav */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('stuck', window.scrollY > 12); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* mobile menu */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobile-menu');
+  function closeMenu(){ menu.classList.remove('show'); nav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Open menu'); }
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('show');
+    nav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  menu.addEventListener('click', function(e){ if(e.target.tagName === 'A') closeMenu(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
+
+  /* scroll reveal */
+  var revealables = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    revealables.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    revealables.forEach(function(el){ ro.observe(el); });
+  }
+
+  /* metric count-up */
+  var nums = document.querySelectorAll('[data-count]');
+  function countUp(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    if(reduce){ el.textContent = target + suffix; return; }
+    var start = null, dur = 1100;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var no = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ countUp(en.target); no.unobserve(en.target); } });
+    }, {threshold:0.5});
+    nums.forEach(function(el){ no.observe(el); });
+  }
+
+  /* stack detail */
+  var sdTitle = document.getElementById('sd-title');
+  var sdBody = document.getElementById('sd-body');
+  var pills = document.querySelectorAll('.pill');
+  function showTech(el){
+    pills.forEach(function(p){ p.classList.remove('active'); });
+    el.classList.add('active');
+    sdTitle.textContent = el.getAttribute('data-t');
+    sdBody.textContent = el.getAttribute('data-d');
+  }
+  pills.forEach(function(el){
+    el.addEventListener('mouseenter', function(){ showTech(el); });
+    el.addEventListener('focus', function(){ showTech(el); });
+    el.addEventListener('click', function(){ showTech(el); });
+  });
+
+  /* scrollspy */
+  var sections = ['work','engineering','stack','about','contact'];
+  var navAnchors = {};
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    navAnchors[a.getAttribute('href').slice(1)] = a;
+  });
+  if('IntersectionObserver' in window){
+    var so = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var a = navAnchors[en.target.id];
+        if(!a) return;
+        if(en.isIntersecting){
+          Object.keys(navAnchors).forEach(function(k){ navAnchors[k].removeAttribute('aria-current'); });
+          a.setAttribute('aria-current','true');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    sections.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) so.observe(el);
+    });
+  }
+})();
+</script>
 </body>
 </html>
