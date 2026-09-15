@@ -8,13 +8,20 @@
 <link rel="canonical" href="https://shailesh-flexgrew.github.io/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0A0A0C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shailesh-flexgrew.github.io/">
 <meta property="og:site_name" content="Shailesh Khandar">
 <meta property="og:title" content="Shailesh Khandar — Senior Full-Stack &amp; Product Engineer">
 <meta property="og:description" content="10+ years building and operating production SaaS, ERP, CRM, commerce, automation and AI-powered business software.">
+<meta property="og:image" content="https://shailesh-flexgrew.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shailesh Khandar — Senior Full-Stack &amp; Product Engineer">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://shailesh-flexgrew.github.io/og-image.png">
 <meta name="twitter:title" content="Shailesh Khandar — Senior Full-Stack &amp; Product Engineer">
 <meta name="twitter:description" content="10+ years building and operating production SaaS, ERP, CRM, commerce, automation and AI-powered business software.">
 
@@ -33,7 +40,7 @@
       "jobTitle":"Senior Full-Stack & Product Engineer",
       "url":"https://shailesh-flexgrew.github.io/",
       "email":"mailto:khandarshailesh111@gmail.com",
-      "telephone":"+91-81606-94389",
+      "telephone":"+91-81606-94389","sameAs":["https://www.upwork.com/freelancers/shaileshsatvara"],
       "address":{"@type":"PostalAddress","addressLocality":"Rajkot","addressRegion":"Gujarat","addressCountry":"IN"},
       "knowsAbout":["Full-stack engineering","SaaS platforms","ERP systems","CRM systems","Multi-tenant architecture","API architecture","Database architecture","Cloud infrastructure","AI agents and automation"]
     },
@@ -261,18 +268,69 @@ p{margin:0}
 }
 .proj:hover{border-color:var(--line-2);transform:translateY(-4px);background:var(--surface-2)}
 @media (prefers-reduced-motion:reduce){.proj{transition:none}.proj:hover{transform:none}}
-.viz{aspect-ratio:16/9;background:#0C0C10;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
-.viz svg{width:100%;height:100%}
-.viz::after{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(70% 80% at 50% 110%,rgba(123,97,255,.22),transparent 70%);
-  opacity:.7;transition:opacity .35s;
+.shot{margin:0;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.chrome{display:flex;align-items:center;gap:.4rem;padding:.5rem .75rem;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.chrome i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.16);flex:none}
+.chrome span{margin-left:.45rem;font-family:var(--mono);font-size:.64rem;color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot-img{aspect-ratio:16/10;position:relative;overflow:hidden;background:#0D0D10}
+.shot-img img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .35s cubic-bezier(.2,.8,.3,1)}
+.proj:hover .shot-img img,.feature:hover .shot-img img{transform:scale(1.02)}
+@media (prefers-reduced-motion:reduce){.shot-img img{transition:none}.proj:hover .shot-img img{transform:none}}
+.shot-cap{position:absolute;left:.6rem;bottom:.6rem;z-index:2;font-family:var(--mono);font-size:.57rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(12,12,16,.8);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:5px;padding:.2rem .45rem}
+[data-kind="live"] .shot-cap::after{content:"Live site screenshot"}
+[data-kind="concept"] .shot-cap::after{content:"Interface illustration"}
+[data-kind="live"] .concept{display:none}
+.concept{position:absolute;inset:0;padding:11px;display:flex;gap:7px}
+.concept .rail{width:23%;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px;display:grid;gap:5px;align-content:start}
+.concept .rail i{display:block;height:4px;border-radius:2px;background:rgba(255,255,255,.09)}
+.concept .rail i:first-child{background:var(--accent);width:62%}
+.concept .body{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px;display:grid;gap:6px;align-content:start;min-width:0}
+.concept .bar{height:7px;border-radius:3px;background:rgba(255,255,255,.1)}
+.concept .bar.w40{width:40%}.concept .bar.w60{width:60%}
+.concept .rows{display:grid;gap:4px}
+.concept .rows i{display:block;height:9px;border-radius:3px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.concept .rows i:nth-child(2){background:var(--accent-soft);border-color:var(--accent-line)}
+.concept .cards{display:grid;gap:5px}
+.concept .cards i{display:block;height:16px;border-radius:4px;background:rgba(255,255,255,.05);border:1px solid var(--line);position:relative}
+.concept .cards i::after{content:'';position:absolute;right:6px;top:5px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.concept .cards i:nth-child(2)::after{background:#F5A623}
+.concept .nodes{display:flex;align-items:center;gap:4px;padding-top:5px}
+.concept .nodes i{display:block;height:17px;flex:1;border-radius:4px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.concept .nodes i:nth-child(3){background:var(--accent-soft);border-color:var(--accent-line)}
+.concept .nodes u{display:block;width:7px;height:1px;background:var(--line-2);flex:none}
+.concept .chart{display:flex;align-items:flex-end;gap:4px;height:48px;padding-top:6px}
+.concept .chart i{display:block;flex:1;border-radius:3px 3px 0 0;background:rgba(255,255,255,.1);height:32%}
+.concept .chart i:nth-child(2){height:56%}.concept .chart i:nth-child(3){height:82%;background:var(--accent)}
+.concept .chart i:nth-child(4){height:46%}.concept .chart i:nth-child(5){height:68%}
+.uw{display:grid;grid-template-columns:minmax(0,1fr);gap:1.4rem;border:1px solid var(--line);border-radius:16px;padding:clamp(1.3rem,3vw,1.9rem);background:var(--surface);margin-bottom:clamp(2.5rem,5vw,3.5rem)}
+@media (min-width:820px){.uw{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2.5rem}}
+.uw-badge{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#14A800;margin-bottom:.85rem}
+.uw-badge i{width:6px;height:6px;border-radius:50%;background:#14A800;flex:none}
+.uw-title{font-size:1.08rem;font-weight:800;letter-spacing:-.022em;margin:0 0 .25rem}
+.uw .role{font-family:var(--mono);font-size:.72rem;color:var(--dim);margin:0 0 1rem}
+.uw-stats{display:flex;flex-wrap:wrap;gap:.5rem}
+.uw-stats div{border:1px solid var(--line);border-radius:10px;padding:.5rem .95rem;text-align:center;min-width:86px}
+.uw-stats b{display:block;font-size:1.05rem;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.uw-stats span{font-size:.67rem;color:var(--dim);font-weight:600}
+.uw-stats .star{color:#F5A623}
+.btn-upwork{background:#14A800;color:#fff}
+.btn-upwork:hover{background:#118A00;transform:translateY(-2px);box-shadow:0 12px 30px -14px rgba(20,168,0,.85)}
+.feature-visual{border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+@media (min-width:920px){.feature-visual{border-bottom:0;border-right:1px solid var(--line)}}
+.feature-visual .shot{border-bottom:1px solid var(--line)}
+.feature-diagram{flex:1;align-content:center}
+.layer-join{position:relative}
+@media (prefers-reduced-motion:no-preference){
+  .layer-join::after{content:'';position:absolute;left:-2.5px;top:0;width:4px;height:4px;border-radius:50%;background:var(--accent);animation:drop 3.4s ease-in-out infinite}
+  .layer-join:nth-of-type(4)::after{animation-delay:.35s}
+  .layer-join:nth-of-type(6)::after{animation-delay:.7s}
+  .layer-join:nth-of-type(8)::after{animation-delay:1.05s}
+  .layer-join:nth-of-type(10)::after{animation-delay:1.4s}
 }
-.proj:hover .viz::after{opacity:1}
-.viz .n{fill:var(--accent);opacity:.85}
-.viz .n2{fill:#fff;opacity:.28}
-.viz .e{stroke:rgba(255,255,255,.2);stroke-width:1;fill:none}
-.viz .ea{stroke:var(--accent);stroke-width:1.25;fill:none;opacity:.75}
+@keyframes drop{0%,72%{opacity:0;transform:translateY(0)}78%{opacity:1}100%{opacity:0;transform:translateY(15px)}}
+.layer{transition:border-color .3s,background .3s,transform .3s}
+.layer:hover{transform:translateX(4px)}
+@media (prefers-reduced-motion:reduce){.layer{transition:none}.layer:hover{transform:none}}
 .proj-body{padding:1.3rem clamp(1.1rem,2vw,1.5rem) 1.5rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
 .cat{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 .proj p.desc{font-size:.93rem;color:var(--muted);line-height:1.55}
@@ -285,7 +343,7 @@ p{margin:0}
 .proj-link{font-size:.84rem;font-weight:700;text-decoration:none;color:var(--text);display:inline-flex;align-items:center;gap:.35rem}
 .proj-link:hover{color:var(--accent)}
 .proj-link svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8}
-.private{font-size:.78rem;color:var(--dim);display:inline-flex;align-items:center;gap:.4rem;font-weight:500}
+.private{font-size:.78rem;color:var(--dim);display:inline-flex;align-items:center;gap:.4rem;font-weight:500;margin:0}
 .private i{width:5px;height:5px;border-radius:50%;background:var(--dim);flex:none}
 
 /* ===== featured ===== */
@@ -437,6 +495,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       <a href="#work">Work</a>
       <a href="#engineering">Engineering</a>
       <a href="#stack">Stack</a>
+      <a href="#architecture">Architecture</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -464,7 +523,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
     <p class="lede">10+ years building and operating production-grade SaaS, ERP, CRM, commerce and automation systems across modern web stacks.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#work">View My Work</a>
-      <a class="btn btn-ghost" href="#contact">Let's Work Together</a>
+      <a class="btn btn-ghost" href="https://www.upwork.com/freelancers/shaileshsatvara?mp_source=share" target="_blank" rel="noopener">View my Upwork profile ↗</a>
     </div>
     <a class="link-sub" href="#engineering">Explore my engineering approach →</a>
 
@@ -495,6 +554,21 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
 <!-- ================= WORK ================= -->
 <section class="section" id="work">
   <div class="wrap">
+    <!-- UPWORK STATS: update these three numbers when your profile changes -->
+    <div class="uw reveal">
+      <div>
+        <span class="uw-badge"><i aria-hidden="true"></i>Upwork</span>
+        <p class="uw-title">Senior Backend &amp; SaaS Developer</p>
+        <p class="role">Go · Node.js · Laravel · APIs</p>
+        <div class="uw-stats">
+          <div><b class="star">★ 5.0</b><span>Rating</span></div>
+          <div><b>7</b><span>Jobs</span></div>
+          <div><b>38</b><span>Hours</span></div>
+        </div>
+      </div>
+      <a class="btn btn-upwork" href="https://www.upwork.com/freelancers/shaileshsatvara?mp_source=share" target="_blank" rel="noopener">View Upwork Profile ↗</a>
+    </div>
+
     <div class="s-head reveal">
       <span class="eyebrow">Selected Work</span>
       <h2>Products in production.</h2>
@@ -504,15 +578,11 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
     <div class="work-grid">
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <path class="ea" d="M60 40 H260 M60 40 V140 M260 40 V140 M60 90 H260"/>
-            <circle class="n" cx="60" cy="40" r="5"/><circle class="n" cx="260" cy="40" r="5"/>
-            <circle class="n2" cx="160" cy="90" r="4"/><circle class="n" cx="60" cy="140" r="5"/>
-            <circle class="n2" cx="260" cy="140" r="4"/>
-            <rect class="e" x="140" y="70" width="40" height="40" rx="6"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="live">
+          <div class="chrome"><i></i><i></i><i></i><span>ecom.lifeguardcrm.com</span></div>
+          <div class="shot-img"><img src="public/projects/lifeguard-commerce.webp" alt="Lifeguard Commerce storefront showing the product catalog" loading="lazy" width="1280" height="800" onerror="this.closest('figure').dataset.kind='concept';this.remove()"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i><i></i></div><div class="body"><div class="bar w40"></div><div class="cards"><i></i><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">Commerce / SaaS</span>
           <h3>Lifeguard Commerce</h3>
@@ -524,14 +594,11 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <path class="e" d="M50 130 L110 70 L170 105 L230 45 L280 80"/>
-            <path class="ea" d="M50 90 H280"/>
-            <circle class="n" cx="110" cy="70" r="5"/><circle class="n" cx="230" cy="45" r="5"/>
-            <circle class="n2" cx="170" cy="105" r="4"/><circle class="n2" cx="50" cy="130" r="4"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="live">
+          <div class="chrome"><i></i><i></i><i></i><span>trainiq.ae</span></div>
+          <div class="shot-img"><img src="public/projects/trainiq.webp" alt="TrainIQ training and assessment platform homepage" loading="lazy" width="1280" height="800" onerror="this.closest('figure').dataset.kind='concept';this.remove()"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i></div><div class="body"><div class="bar w60"></div><div class="chart"><i></i><i></i><i></i><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">Training / SaaS</span>
           <h3>TrainIQ</h3>
@@ -543,34 +610,27 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <path class="ea" d="M160 90 L80 50 M160 90 L240 50 M160 90 L80 130 M160 90 L240 130"/>
-            <circle class="n" cx="160" cy="90" r="7"/>
-            <circle class="n2" cx="80" cy="50" r="4"/><circle class="n2" cx="240" cy="50" r="4"/>
-            <circle class="n2" cx="80" cy="130" r="4"/><circle class="n2" cx="240" cy="130" r="4"/>
-            <rect class="e" x="30" y="35" width="260" height="110" rx="10"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="concept">
+          <div class="chrome"><i></i><i></i><i></i><span>Lifeguard HRMS — employee, attendance, productivity</span></div>
+          <div class="shot-img"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i><i></i></div><div class="body"><div class="bar w40"></div><div class="rows"><i></i><i></i><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">HR / Workforce</span>
           <h3>Lifeguard HRMS</h3>
           <p class="desc">Workforce management covering employee records, attendance and productivity, with a companion desktop agent reporting activity to the server.</p>
           <p class="arch">Vue SPA → Laravel API → MySQL · desktop agent ingest</p>
           <ul class="chips"><li>Vue.js</li><li>Laravel</li><li>MySQL</li><li>Desktop agent</li></ul>
-          <p class="private"><i></i>Private / authenticated production system</p>
+          <div class="proj-foot"><p class="private"><i></i>Private / authenticated production system</p> <a class="proj-link" href="#cs-hrms">Case study ↓</a></div>
         </div>
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <rect class="e" x="50" y="45" width="220" height="90" rx="10"/>
-            <path class="ea" d="M50 75 H270 M50 105 H270"/>
-            <circle class="n" cx="80" cy="60" r="4"/><circle class="n" cx="80" cy="90" r="4"/><circle class="n" cx="80" cy="120" r="4"/>
-            <circle class="n2" cx="240" cy="90" r="5"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="concept">
+          <div class="chrome"><i></i><i></i><i></i><span>Lifeguard CRM — pipeline, leads, customers</span></div>
+          <div class="shot-img"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i></div><div class="body"><div class="bar w40"></div><div class="cards"><i></i><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">CRM / Sales</span>
           <h3>Lifeguard CRM</h3>
@@ -582,56 +642,43 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <path class="ea" d="M55 90 H105 M135 90 H185 M215 90 H265"/>
-            <rect class="e" x="105" y="70" width="30" height="40" rx="5"/>
-            <rect class="e" x="185" y="70" width="30" height="40" rx="5"/>
-            <circle class="n" cx="50" cy="90" r="6"/><circle class="n" cx="270" cy="90" r="6"/>
-            <circle class="n2" cx="160" cy="50" r="4"/><circle class="n2" cx="160" cy="130" r="4"/>
-            <path class="e" d="M160 60 V70 M160 110 V120"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="concept">
+          <div class="chrome"><i></i><i></i><i></i><span>The Automate — workflow builder, scheduled jobs</span></div>
+          <div class="shot-img"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i></div><div class="body"><div class="bar w60"></div><div class="nodes"><i></i><u></u><i></i><u></u><i></i></div><div class="rows"><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">Automation / SaaS</span>
           <h3>The Automate</h3>
           <p class="desc">Workflow automation where users configure and run recurring jobs, with the API kept independent of the client.</p>
           <p class="arch">Next.js client → NestJS API → MySQL · Redis</p>
           <ul class="chips"><li>Next.js</li><li>NestJS</li><li>MySQL</li><li>Redis</li></ul>
-          <p class="private"><i></i>Private / authenticated production system</p>
+          <div class="proj-foot"><p class="private"><i></i>Private / authenticated production system</p> <a class="proj-link" href="#cs-automate">Case study ↓</a></div>
         </div>
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <path class="ea" d="M160 45 V135"/>
-            <path class="e" d="M100 65 H220 M100 90 H220 M100 115 H220"/>
-            <circle class="n" cx="160" cy="45" r="6"/><circle class="n" cx="160" cy="135" r="6"/>
-            <circle class="n2" cx="100" cy="65" r="4"/><circle class="n2" cx="220" cy="65" r="4"/>
-            <circle class="n2" cx="100" cy="115" r="4"/><circle class="n2" cx="220" cy="115" r="4"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="live">
+          <div class="chrome"><i></i><i></i><i></i><span>community.heartlynks.org</span></div>
+          <div class="shot-img"><img src="public/projects/heartlynks.webp" alt="Heartlynks Community platform showing the activity feed" loading="lazy" width="1280" height="800" onerror="this.closest('figure').dataset.kind='concept';this.remove()"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i></div><div class="body"><div class="bar w40"></div><div class="cards"><i></i><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">Community / Platform</span>
           <h3>Heartlynks Community</h3>
           <p class="desc">Community platform built for throughput, with events carried between services rather than handled inline on the write path.</p>
           <p class="arch">Next.js → Go (Fiber) → PostgreSQL · Redis · Kafka</p>
           <ul class="chips"><li>Next.js</li><li>Go / Fiber</li><li>PostgreSQL</li><li>Redis</li><li>Kafka</li></ul>
-          <a class="proj-link" href="https://community.heartlynks.org/" target="_blank" rel="noopener">Visit site <svg viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+          <div class="proj-foot"><a class="proj-link" href="https://community.heartlynks.org/" target="_blank" rel="noopener">Visit site <svg viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a> <a class="proj-link" href="#cs-heartlynks">Case study ↓</a></div>
         </div>
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <rect class="e" x="55" y="50" width="60" height="80" rx="6"/>
-            <rect class="e" x="130" y="50" width="60" height="80" rx="6"/>
-            <rect class="ea" x="205" y="50" width="60" height="80" rx="6"/>
-            <path class="e" d="M55 75 H115 M130 75 H190 M205 75 H265"/>
-            <circle class="n" cx="235" cy="105" r="5"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="live">
+          <div class="chrome"><i></i><i></i><i></i><span>carolinacabinetwarehouse.com</span></div>
+          <div class="shot-img"><img src="public/projects/carolina-cabinet.webp" alt="Carolina Cabinet Warehouse online store homepage" loading="lazy" width="1280" height="800" onerror="this.closest('figure').dataset.kind='concept';this.remove()"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i><i></i></div><div class="body"><div class="bar w60"></div><div class="cards"><i></i><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">E-commerce</span>
           <h3>Carolina Cabinet Warehouse</h3>
@@ -643,13 +690,11 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <path class="ea" d="M60 130 V60 H130 V95 H200 V50 H265 V130 Z"/>
-            <path class="e" d="M60 130 H265"/>
-            <circle class="n" cx="130" cy="60" r="4"/><circle class="n" cx="200" cy="95" r="4"/><circle class="n" cx="265" cy="50" r="4"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="concept">
+          <div class="chrome"><i></i><i></i><i></i><span>FlexMat ERP — production, materials, inventory</span></div>
+          <div class="shot-img"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i><i></i><i></i></div><div class="body"><div class="bar w40"></div><div class="rows"><i></i><i></i><i></i></div><div class="chart"><i></i><i></i><i></i><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">Manufacturing ERP</span>
           <h3>FlexMat ERP</h3>
@@ -659,14 +704,11 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       </article>
 
       <article class="proj reveal">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
-            <path class="e" d="M70 125 V85 L110 60 L150 85 V125 Z"/>
-            <path class="ea" d="M175 125 V70 L215 45 L255 70 V125 Z"/>
-            <path class="e" d="M60 125 H270"/>
-            <circle class="n" cx="215" cy="95" r="5"/><circle class="n2" cx="110" cy="100" r="4"/>
-          </svg>
-        </div>
+        <figure class="shot" data-kind="live">
+          <div class="chrome"><i></i><i></i><i></i><span>flexestate.flexgrew.com</span></div>
+          <div class="shot-img"><img src="public/projects/flexgrew-estate.webp" alt="Flexgrew Estate property analysis portal" loading="lazy" width="1280" height="800" onerror="this.closest('figure').dataset.kind='concept';this.remove()"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i></div><div class="body"><div class="bar w60"></div><div class="chart"><i></i><i></i><i></i><i></i><i></i></div><div class="rows"><i></i><i></i></div></div></div></div>
+          <figcaption class="shot-cap"></figcaption>
+        </figure>
         <div class="proj-body">
           <span class="cat">Real Estate / Analytics</span>
           <h3>Flexgrew Estate</h3>
@@ -688,7 +730,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       <p class="lede">The same engineer, three deliberately different architectures. Each choice came from the operating conditions, not from preference.</p>
     </div>
 
-    <article class="feature reveal">
+    <article class="feature reveal" id="cs-heartlynks">
       <div class="feature-top">
         <div class="feature-intro">
           <span class="cat">Community / Platform</span>
@@ -709,7 +751,13 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
             </div>
           </div>
         </div>
-        <div class="feature-diagram">
+        <div class="feature-visual">
+          <figure class="shot" data-kind="live">
+            <div class="chrome"><i></i><i></i><i></i><span>community.heartlynks.org</span></div>
+            <div class="shot-img"><img src="public/projects/heartlynks.webp" alt="Heartlynks Community platform interface" loading="lazy" width="1280" height="800" onerror="this.closest('figure').dataset.kind='concept';this.remove()"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i></div><div class="body"><div class="bar w40"></div><div class="cards"><i></i><i></i><i></i></div></div></div></div>
+            <figcaption class="shot-cap"></figcaption>
+          </figure>
+          <div class="feature-diagram">
           <div class="flow">
             <div class="flow-row"><span class="tag">Client</span><span class="val">Next.js</span></div>
             <div class="flow-arrow" aria-hidden="true"></div>
@@ -723,9 +771,10 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
           </div>
         </div>
       </div>
+        </div>
     </article>
 
-    <article class="feature reveal">
+    <article class="feature reveal" id="cs-automate">
       <div class="feature-top">
         <div class="feature-intro">
           <span class="cat">Automation / SaaS</span>
@@ -746,7 +795,13 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
             </div>
           </div>
         </div>
-        <div class="feature-diagram">
+        <div class="feature-visual">
+          <figure class="shot" data-kind="concept">
+            <div class="chrome"><i></i><i></i><i></i><span>The Automate — workflow builder, scheduled jobs</span></div>
+            <div class="shot-img"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i></div><div class="body"><div class="bar w60"></div><div class="nodes"><i></i><u></u><i></i><u></u><i></i></div><div class="rows"><i></i><i></i><i></i></div></div></div></div>
+            <figcaption class="shot-cap"></figcaption>
+          </figure>
+          <div class="feature-diagram">
           <div class="flow">
             <div class="flow-row"><span class="tag">Client</span><span class="val">Next.js</span></div>
             <div class="flow-arrow" aria-hidden="true"></div>
@@ -760,9 +815,10 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
           </div>
         </div>
       </div>
+        </div>
     </article>
 
-    <article class="feature reveal">
+    <article class="feature reveal" id="cs-hrms">
       <div class="feature-top">
         <div class="feature-intro">
           <span class="cat">HR / Workforce</span>
@@ -783,7 +839,13 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
             </div>
           </div>
         </div>
-        <div class="feature-diagram">
+        <div class="feature-visual">
+          <figure class="shot" data-kind="concept">
+            <div class="chrome"><i></i><i></i><i></i><span>Lifeguard HRMS — employee, attendance, productivity</span></div>
+            <div class="shot-img"><div class="concept" aria-hidden="true"><div class="rail"><i></i><i></i><i></i><i></i></div><div class="body"><div class="bar w40"></div><div class="rows"><i></i><i></i><i></i><i></i></div></div></div></div>
+            <figcaption class="shot-cap"></figcaption>
+          </figure>
+          <div class="feature-diagram">
           <div class="flow">
             <div class="flow-row"><span class="tag">Clients</span><span class="val">Vue.js · Desktop agent</span></div>
             <div class="flow-arrow" aria-hidden="true"></div>
@@ -795,6 +857,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
           </div>
         </div>
       </div>
+        </div>
     </article>
   </div>
 </section>
@@ -906,7 +969,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
 </section>
 
 <!-- ================= ARCHITECTURE ================= -->
-<section class="section">
+<section class="section" id="architecture">
   <div class="wrap">
     <div class="s-head reveal" style="margin-inline:auto;text-align:center">
       <span class="eyebrow">Architecture</span>
@@ -998,6 +1061,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
       <p class="lede">Tell me what you're trying to build, where you're stuck, or what needs to scale. I'll help determine the right technical approach.</p>
       <div class="contact-cta">
         <a class="btn btn-primary" href="mailto:khandarshailesh111@gmail.com">Start a conversation</a>
+        <a class="btn btn-upwork" href="https://www.upwork.com/freelancers/shaileshsatvara?mp_source=share" target="_blank" rel="noopener">Hire me on Upwork ↗</a>
         <a class="btn btn-ghost" href="tel:+918160694389">+91 81606 94389</a>
       </div>
       <dl class="contact-meta">
@@ -1022,6 +1086,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
         <a href="#work">Work</a>
         <a href="#engineering">Engineering</a>
         <a href="#contact">Contact</a>
+        <a href="https://www.upwork.com/freelancers/shaileshsatvara?mp_source=share" target="_blank" rel="noopener">Upwork ↗</a>
       </nav>
       <div class="foot-id">
         <span><a href="mailto:khandarshailesh111@gmail.com" style="text-decoration:none">khandarshailesh111@gmail.com</a></span><br>
@@ -1112,7 +1177,7 @@ footer{border-top:1px solid var(--line);padding-block:2.5rem 3rem;background:var
   });
 
   /* scrollspy */
-  var sections = ['work','engineering','stack','about','contact'];
+  var sections = ['work','engineering','stack','architecture','about','contact'];
   var navAnchors = {};
   document.querySelectorAll('.nav-links a').forEach(function(a){
     navAnchors[a.getAttribute('href').slice(1)] = a;
